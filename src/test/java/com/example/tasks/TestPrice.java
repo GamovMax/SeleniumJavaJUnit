@@ -1,7 +1,5 @@
 package com.example.tasks;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,9 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import java.util.Objects;
-
-import static com.example.tasks.MainPage.*;
+import static com.example.tasks.MainPage.driver;
 public class TestPrice {
 
     @Test
