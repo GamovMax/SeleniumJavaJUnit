@@ -19,7 +19,7 @@ public class TestPrice {
 
         driver = new ChromeDriver();
 
-        driver.get("http://192.168.111.130:8080/litecart/en/");
+        driver.get("http://192.168.111.16/litecart/en/");
         driver.manage().window().maximize();
 
 
@@ -66,7 +66,7 @@ public class TestPrice {
 
         driver = new FirefoxDriver();
 
-        driver.get("http://192.168.111.130:8080/litecart/en/");
+        driver.get("http://192.168.111.16/litecart/en/");
         driver.manage().window().maximize();
 
 
@@ -113,7 +113,7 @@ public class TestPrice {
 
         driver = new EdgeDriver();
 
-        driver.get("http://192.168.111.130:8080/litecart/en/");
+        driver.get("http://192.168.111.16/litecart/en/");
         driver.manage().window().maximize();
 
 
