@@ -17,6 +17,7 @@ public class TestReg {
     @After
     public void tearDown() {
         driver.quit();
+
     }
     @Test
     public void Reg()
