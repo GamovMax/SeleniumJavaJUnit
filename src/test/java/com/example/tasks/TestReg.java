@@ -4,7 +4,6 @@ import org.junit.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
