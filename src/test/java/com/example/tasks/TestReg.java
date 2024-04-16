@@ -56,7 +56,8 @@ public class TestReg {
 
         driver.findElement(By.className("select2-search__field")).click();
         driver.findElement(By.className("select2-search__field")).sendKeys("United States");
-        driver.findElement(By.className("select2-search__field")).sendKeys(Keys.ENTER);
+//        driver.findElement(By.className("select2-search__field")).sendKeys(Keys.ENTER);
+        driver.findElement(By.className("select2-results__option--highlighted")).click();
 
         Random random = new Random();
         int randomNumber = random.nextInt(1000000000);
