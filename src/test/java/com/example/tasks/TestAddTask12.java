@@ -1,59 +1,42 @@
 package com.example.tasks;
-
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
-import static com.example.tasks.MainPage.*;
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
-import static com.example.tasks.MainPage.driver;
 
-public class TestAddTask12 {
-    @Before
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
-    @After
-    public void tearDown() {
-        driver.quit();
+public class TestAddTask12 extends MainPage {
 
-    }
     @Test
     public void Add(){
-        driver.get("http://192.168.111.16/litecart/admin/login.php");
-        driver.manage().window().maximize();
+
+        get("http://192.168.111.16/litecart/admin/login.php");
+
+        maximize();
         loginPass();
 
-        driver.findElement(By.linkText("Catalog")).click();
-        driver.findElement(By.partialLinkText("dd New Produc")).click();
-        driver.findElement(By.cssSelector("input[data-type=\"toggle\"][value=\"1\"]")).click();
+        click_linkText("Catalog");
+
+        click_partialLinkText("dd New Produc");
+
+        click_cssSelector("input[data-type=\"toggle\"][value=\"1\"]");
 
         Random random = new Random();
         int randomNumber = random.nextInt(1000000000);
 
         String name = "Name" + randomNumber;
 
-        driver.findElement(By.cssSelector("input[name='name[en]']")).click();
-        driver.findElement(By.cssSelector("input[name='name[en]']")).sendKeys(name);
+        click_cssSelector("input[name='name[en]']");
+        sendKeys_cssSelector("input[name='name[en]']", name);
 
-        driver.findElement(By.linkText("Information")).click();
+        click_linkText("Information");
 
-        driver.findElement(By.name("keywords")).click();
-        driver.findElement(By.name("keywords")).sendKeys(name);
+        click_name("keywords");
+        sendKeys_name("keywords", name);
 
-        driver.findElement(By.linkText("Prices")).click();
+        click_linkText("Prices");
 
-        driver.findElement(By.name("gross_prices[USD]")).click();
-        driver.findElement(By.name("gross_prices[USD]")).sendKeys("1");
+        click_name("gross_prices[USD]");
+        sendKeys_name("gross_prices[USD]", "1");
 
-        driver.findElement(By.name("save")).click();
-//        try {
-//            Thread.sleep(2000);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
+        click_name("save");
+
     }
 }
