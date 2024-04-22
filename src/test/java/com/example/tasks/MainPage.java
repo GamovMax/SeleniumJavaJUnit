@@ -27,7 +27,7 @@ public class MainPage {
   @Before
   public void setUp() {
     driver = new ChromeDriver();
-    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
   }
   @After
   public void tearDown() {
