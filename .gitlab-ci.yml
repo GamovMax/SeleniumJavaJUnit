@@ -10,7 +10,9 @@ build:
 
 test:
   stage: test
+  image: python:3.9
   script:
+    - python --version
+    - python -m pip install selenium
+    - python -m pip install pytest
     - python test.py
-  tags:
-    - python
