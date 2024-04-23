@@ -14,7 +14,7 @@ public class TestAPI {
     }
 
     @Test
-    public void GetFirst(){
+    public void testGetFirst(){
         // Выполнение GET-запроса к API
         Response response = RestAssured.given()
                 .when()
