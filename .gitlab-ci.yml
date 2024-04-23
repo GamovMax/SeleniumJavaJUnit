@@ -10,6 +10,7 @@ build:
 
 test:
   stage: test
-  image: maven:latest
   script:
-    - mvn test -Dtest=com.example.tasks.TestAPI
+    - python test.py
+  tags:
+    - python
