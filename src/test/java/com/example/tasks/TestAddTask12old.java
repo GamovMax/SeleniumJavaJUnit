@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.util.Random;
 
-public class TestAddTask12old extends MainPage {
+public class TestAddTask12old extends BasePage.BasePage {
 //    @Before
 //    public void setUp() {
 //        driver = new ChromeDriver();

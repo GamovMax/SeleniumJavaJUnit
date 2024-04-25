@@ -4,12 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 
-public class TestCheckoutTask13 extends MainPage {
+import static constants.Constant.Urls.URL_CLIENT;
+
+public class TestCheckoutTask13 extends BasePage.BasePage {
 
     @Test
     public void Checkout(){
 
-        get("http://192.168.111.16/litecart/en/");
+        get(URL_CLIENT);
         maximize();
 
         for (int i=1; i<4; i++)

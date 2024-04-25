@@ -2,12 +2,14 @@ package com.example.tasks;
 import org.junit.Test;
 import java.util.Random;
 
+import static constants.Constant.Urls.URL_ADMIN;
+
 public class TestAddTask12 extends MainPage {
 
     @Test
     public void Add(){
 
-        get("http://192.168.111.16/litecart/admin/login.php");
+        get(URL_ADMIN);
 
         maximize();
         loginPass();

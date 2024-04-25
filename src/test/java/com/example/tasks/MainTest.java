@@ -3,14 +3,10 @@ package com.example.tasks;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import static com.example.tasks.MainPage.*;
-
-
-public class MainTest {
+public class MainTest extends BasePage.BasePage {
 
         private Object JOptionPane;
 
@@ -40,7 +36,7 @@ public class MainTest {
     @Test
     public void testMethod() {
 
-        driver = new ChromeDriver();
+//        driver = new ChromeDriver();
         driver.get("https://translate.yandex.ru/?source_lang=en&target_lang=ru");
         try {
             Thread.sleep(2000);
@@ -83,13 +79,13 @@ public class MainTest {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.close();
+//        driver.close();
         driver.quit();
     }
 
     @Test
     public void test1() {
-        driver = new ChromeDriver();
+//        driver = new ChromeDriver();
         driver.get("http://192.168.111.16/litecart/admin/");
         driver.manage().window().setSize(new Dimension(1440, 860));
 
@@ -143,14 +139,14 @@ public class MainTest {
         driver.findElement(By.cssSelector("#doc-csv .name")).click();
         driver.findElement(By.linkText("Users")).click();
         driver.findElement(By.linkText("vQmods")).click();
-        driver.close();
+//        driver.close();
         driver.quit();
     }
 
 
     @Test
     public void test2() {
-        driver = new ChromeDriver();
+//        driver = new ChromeDriver();
         driver.get("http://192.168.111.16/litecart/admin/login.php");
         try {
             Thread.sleep(2000);
@@ -164,7 +160,7 @@ public class MainTest {
             throw new RuntimeException(e);
         }
         loginPass();
-        driver.close();
+//        driver.close();
         driver.quit();
 
 //        int seconds = 10;
@@ -242,8 +238,8 @@ public class MainTest {
         driverF.findElement(By.cssSelector("#doc-csv .name")).click();
         driverF.findElement(By.linkText("Users")).click();
         driverF.findElement(By.linkText("vQmods")).click();
-        driverF.close();
-      //  driverF.quit();
+//        driverF.close();
+        driverF.quit();
     }
 
     @Test
@@ -302,8 +298,8 @@ public class MainTest {
         driverE.findElement(By.cssSelector("#doc-csv .name")).click();
         driverE.findElement(By.linkText("Users")).click();
         driverE.findElement(By.linkText("vQmods")).click();
-        driverE.close();
-        //driverE.quit();
+//        driverE.close();
+        driverE.quit();
     }
 
 }
