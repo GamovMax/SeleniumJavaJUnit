@@ -1,5 +1,6 @@
 package com.example.tasks;
 import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.json.simple.JSONObject;
 import org.junit.Before;
@@ -85,5 +86,38 @@ public class TestAPI {
         String jsonResponse = response.getBody().asString();
         System.out.println(jsonResponse);
 
+    }
+
+    @Test
+    public void Option(){
+    Response response = RestAssured.given()
+            .when()
+            .options("/posts");
+
+        System.out.println("Response code: " + response.getStatusCode());
+        System.out.println("Allowed methods: " + response.getHeader("Allow"));
+    }
+
+    @Test
+    public void Head(){
+    Response response = RestAssured.head("/posts");
+
+        System.out.println("Response code: " + response.getStatusCode());
+        System.out.println("Content-Type: " + response.getHeader("Content-Type"));
+        System.out.println("Response time: " + response.getTime() + " ms");
+    }
+
+    @Test
+    public void Patch(){
+        String requestBody = "{\"title\": \"Updated title\"}";
+
+        Response response = RestAssured.given()
+                .contentType(ContentType.JSON)
+                .body(requestBody)
+                .when()
+                .patch("/posts/1");
+
+        System.out.println("Response code: " + response.getStatusCode());
+        System.out.println("Response body: " + response.getBody().asString());
     }
 }
