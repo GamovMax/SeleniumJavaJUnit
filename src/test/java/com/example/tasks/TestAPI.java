@@ -1,6 +1,7 @@
 package com.example.tasks;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.json.simple.JSONObject;
 import org.junit.Before;
 import org.junit.Test;
 import static io.restassured.RestAssured.given;
@@ -44,6 +45,46 @@ public class TestAPI {
                 .body("{\"title\": \"foo\", \"body\": \"bar\", \"userId\": 1}")
                 .post("/posts")
                 .then().statusCode(201);
+    }
+
+    @Test
+    public void Del(){
+        // Отправка DELETE запроса
+        given()
+                .when()
+                .delete("/posts/1}")
+                .then()
+                .statusCode(200); // Проверка статуса ответа (200 - OK)
+    }
+
+    @Test
+    public void Put(){
+
+        JSONObject request = new JSONObject();
+        request.put("title", "New Title");
+        request.put("body", "New Body");
+        request.put("userId", 1);
+
+        given()
+                .header("Content-Type", "application/json")
+                .body(request.toJSONString())
+                .when()
+                .put("/posts/1")
+                .then()
+                .statusCode(200);
+
+    }
+
+    @Test
+    public void GetJSON(){
+
+        Response response = RestAssured.given()
+                .when()
+                .get("/posts/1"); // Пример запроса к API, где /posts/1 - это часть URL, необходимая для получения конкретной информации
+
+        String jsonResponse = response.getBody().asString();
+        System.out.println(jsonResponse);
+
     }
 
 }

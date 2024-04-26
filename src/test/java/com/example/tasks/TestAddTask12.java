@@ -4,7 +4,7 @@ import java.util.Random;
 
 import static constants.Constant.Urls.URL_ADMIN;
 
-public class TestAddTask12 extends MainPage {
+public class TestAddTask12 extends BasePage.BasePage {
 
     @Test
     public void Add(){
