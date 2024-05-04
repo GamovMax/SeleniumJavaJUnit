@@ -22,10 +22,10 @@ public class BasePage {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
     }
+
     @After
     public void tearDown() {
         driver.quit();
-
     }
 
     public static void click_linkText(String str) {
