@@ -87,11 +87,13 @@ public class MainTest extends BasePage.BasePage {
     public void test1() {
 //        driver = new ChromeDriver();
         driver.get("http://192.168.111.16/litecart/admin/");
-        driver.manage().window().setSize(new Dimension(1440, 860));
+//        driver.manage().window().setSize(new Dimension(1440, 860));
 
+        maximize();
         loginPass();
 
-        driver.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
+//        driver.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
+        click_xpath("//li[@id=\'app-\']/a/span[2]");
         driver.findElement(By.cssSelector("#doc-logotype .name")).click();
         driver.findElement(By.linkText("Catalog")).click();
         driver.findElement(By.cssSelector("#doc-product_groups .name")).click();
@@ -102,9 +104,11 @@ public class MainTest extends BasePage.BasePage {
         driver.findElement(By.cssSelector("#doc-sold_out_statuses .name")).click();
         driver.findElement(By.cssSelector("#doc-quantity_units .name")).click();
         driver.findElement(By.cssSelector("#doc-csv .name")).click();
-        driver.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[3]")).click();
+//        driver.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[3]")).click();
+        click_xpath("(//li[@id=\'app-\']/a/span[2])[3]");
         driver.findElement(By.linkText("Currencies")).click();
-        driver.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[5]")).click();
+//        driver.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[5]")).click();
+        click_xpath("(//li[@id=\'app-\']/a/span[2])[5]");
         driver.findElement(By.cssSelector("#doc-csv .name")).click();
         driver.findElement(By.cssSelector("#doc-newsletter .name")).click();
         driver.findElement(By.linkText("Geo Zones")).click();
@@ -134,13 +138,14 @@ public class MainTest extends BasePage.BasePage {
         driver.findElement(By.linkText("Slides")).click();
         driver.findElement(By.linkText("Tax")).click();
         driver.findElement(By.linkText("Tax Rates")).click();
-        driver.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[15]")).click();
+//        driver.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[15]")).click();
+        click_xpath("(//li[@id=\'app-\']/a/span[2])[15]");
         driver.findElement(By.cssSelector("#doc-scan .name")).click();
         driver.findElement(By.cssSelector("#doc-csv .name")).click();
         driver.findElement(By.linkText("Users")).click();
         driver.findElement(By.linkText("vQmods")).click();
 //        driver.close();
-        driver.quit();
+//        driver.quit();
     }
 
 

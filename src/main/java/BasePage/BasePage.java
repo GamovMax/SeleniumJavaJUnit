@@ -36,6 +36,10 @@ public class BasePage {
         driver.findElement(By.partialLinkText(str)).click();
     }
 
+    public static void click_xpath(String str) {
+        driver.findElement(By.xpath(str)).click();
+    }
+
     public static void click_cssSelector(String str) {
         driver.findElement(By.cssSelector(str)).click();
     }
