@@ -56,10 +56,21 @@
           <scope>test</scope>
       </dependency>
       <dependency>
+          <groupId>io.rest-assured</groupId>
+          <artifactId>rest-assured</artifactId>
+          <version>4.4.0</version>
+          <scope>test</scope>
+      </dependency>
+      <dependency>
           <groupId>net.lightbody.bmp</groupId>
           <artifactId>browsermob-core</artifactId>
           <version>2.1.5</version>
           <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.googlecode.json-simple</groupId>
+          <artifactId>json-simple</artifactId>
+          <version>1.1.1</version>
       </dependency>
   </dependencies>
   <build>

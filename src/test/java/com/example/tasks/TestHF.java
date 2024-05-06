@@ -4,18 +4,13 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 public class TestHF {
-    private Object Optional;
 
     @Test
-    public void Screen() throws IOException, AWTException {
+    public void Screen() throws AWTException {
 
         WebDriver driver = new FirefoxDriver();
 
@@ -102,9 +97,9 @@ public class TestHF {
             }
 
             // Захватываем изображение экрана с помощью Robot
-            BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
-
-            ImageIO.write(screenShot, "png", new File("fullscreen_screenshot.png"));
+//            BufferedImage screenShot = robot.createScreenCapture(new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+//Записываем скриншот в файл
+//            ImageIO.write(screenShot, "png", new File("fullscreen_screenshot.png"));
         }
 
         driver.quit();

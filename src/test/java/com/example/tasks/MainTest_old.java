@@ -6,93 +6,127 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class MainTest extends BasePage.BasePage {
+public class MainTest_old extends BasePage.BasePage {
+
+        private Object JOptionPane;
+
+
+//    @Before
+//    public void setUp() {
+//        //System.setProperty("webdriver.chrome.driver", "path_to_chromedriver");
+//        //driver = new ChromeDriver();
+//        //Map<String, Object> vars = new HashMap<String, Object>();
+//
+//    }
+
+//    @After
+//    public void tearDown() {
+//        //Scanner scanner = new Scanner(System.in);
+//        //System.out.println("Для завершения автотеста нажмите клавишу Enter!");
+//        //scanner.nextLine(); // Этот метод будет ожидать нажатия клавиши Enter
+//        //System.out.println("Автотест завершён!");
+//
+//        //WebDriverWait wait;
+//        //wait = new WebDriverWait(driver,1000);
+//        //Alert prompt = null;
+//        //prompt.sendKeys("Для завершения автотеста нажмите кнопку 'Ок'");
+//        driver.quit();
+//    }
 
     @Test
     public void testMethod() {
 
-
+//        driver = new ChromeDriver();
         driver.get("https://translate.yandex.ru/?source_lang=en&target_lang=ru");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        maximize();
+        driver.manage().window().setSize(new Dimension(1050, 735));
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        click_cssSelector(".verticalMenuNavItem:nth-child(2)");
+        driver.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(2)")).click();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        click_cssSelector(".verticalMenuNavItem:nth-child(3)");
+        driver.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(3)")).click();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        click_cssSelector(".verticalMenuNavItem:nth-child(4)");
+        driver.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(4)")).click();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        click_cssSelector(".verticalMenuNavItem:nth-child(5)");
+        driver.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(5)")).click();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        click_cssSelector(".verticalMenuNavItem:nth-child(6)");
+        driver.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(6)")).click();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+//        driver.close();
+        driver.quit();
     }
 
     @Test
     public void test1() {
+//        driver = new ChromeDriver();
         driver.get("http://192.168.111.16/litecart/admin/");
+//        driver.manage().window().setSize(new Dimension(1440, 860));
+
         maximize();
         loginPass();
+
+//        driver.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
         click_xpath("//li[@id=\'app-\']/a/span[2]");
-        click_cssSelector("#doc-logotype .name");
+        driver.findElement(By.cssSelector("#doc-logotype .name")).click();
         driver.findElement(By.linkText("Catalog")).click();
-        click_cssSelector("#doc-product_groups .name");
-        click_cssSelector("#doc-option_groups .name");
-        click_cssSelector("#doc-manufacturers .name");
-        click_cssSelector("#doc-suppliers .name");
-        click_cssSelector("#doc-delivery_statuses .name");
-        click_cssSelector("#doc-sold_out_statuses .name");
-        click_cssSelector("#doc-quantity_units .name");
-        click_cssSelector("#doc-csv .name");
+        driver.findElement(By.cssSelector("#doc-product_groups .name")).click();
+        driver.findElement(By.cssSelector("#doc-option_groups .name")).click();
+        driver.findElement(By.cssSelector("#doc-manufacturers .name")).click();
+        driver.findElement(By.cssSelector("#doc-suppliers .name")).click();
+        driver.findElement(By.cssSelector("#doc-delivery_statuses .name")).click();
+        driver.findElement(By.cssSelector("#doc-sold_out_statuses .name")).click();
+        driver.findElement(By.cssSelector("#doc-quantity_units .name")).click();
+        driver.findElement(By.cssSelector("#doc-csv .name")).click();
+//        driver.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[3]")).click();
         click_xpath("(//li[@id=\'app-\']/a/span[2])[3]");
         driver.findElement(By.linkText("Currencies")).click();
+//        driver.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[5]")).click();
         click_xpath("(//li[@id=\'app-\']/a/span[2])[5]");
-        click_cssSelector("#doc-csv .name");
-        click_cssSelector("#doc-newsletter .name");
+        driver.findElement(By.cssSelector("#doc-csv .name")).click();
+        driver.findElement(By.cssSelector("#doc-newsletter .name")).click();
         driver.findElement(By.linkText("Geo Zones")).click();
         driver.findElement(By.linkText("Languages")).click();
-        click_cssSelector("#doc-storage_encoding .name");
+        driver.findElement(By.cssSelector("#doc-storage_encoding .name")).click();
         driver.findElement(By.linkText("Modules")).click();
-        click_cssSelector("#doc-customer .name");
-        click_cssSelector("#doc-shipping .name");
-        click_cssSelector("#doc-payment .name");
-        click_cssSelector("#doc-order_total .name");
-        click_cssSelector("#doc-order_success .name");
-        click_cssSelector("#doc-order_action .name");
+        driver.findElement(By.cssSelector("#doc-customer .name")).click();
+        driver.findElement(By.cssSelector("#doc-shipping .name")).click();
+        driver.findElement(By.cssSelector("#doc-payment .name")).click();
+        driver.findElement(By.cssSelector("#doc-order_total .name")).click();
+        driver.findElement(By.cssSelector("#doc-order_success .name")).click();
+        driver.findElement(By.cssSelector("#doc-order_action .name")).click();
         driver.findElement(By.linkText("Orders")).click();
-        click_cssSelector("#doc-order_statuses .name");
+        driver.findElement(By.cssSelector("#doc-order_statuses .name")).click();
         driver.findElement(By.linkText("Pages")).click();
         driver.findElement(By.linkText("Reports")).click();
-        click_cssSelector("#doc-most_sold_products .name");
-        click_cssSelector("#doc-most_shopping_customers .name");
+        driver.findElement(By.cssSelector("#doc-most_sold_products .name")).click();
+        driver.findElement(By.cssSelector("#doc-most_shopping_customers .name")).click();
         driver.findElement(By.linkText("Settings")).click();
         driver.findElement(By.linkText("Defaults")).click();
         driver.findElement(By.linkText("General")).click();
@@ -104,29 +138,54 @@ public class MainTest extends BasePage.BasePage {
         driver.findElement(By.linkText("Slides")).click();
         driver.findElement(By.linkText("Tax")).click();
         driver.findElement(By.linkText("Tax Rates")).click();
+//        driver.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[15]")).click();
         click_xpath("(//li[@id=\'app-\']/a/span[2])[15]");
-        click_cssSelector("#doc-scan .name");
-        click_cssSelector("#doc-csv .name");
+        driver.findElement(By.cssSelector("#doc-scan .name")).click();
+        driver.findElement(By.cssSelector("#doc-csv .name")).click();
         driver.findElement(By.linkText("Users")).click();
         driver.findElement(By.linkText("vQmods")).click();
+//        driver.close();
+//        driver.quit();
+
     }
 
 
     @Test
     public void test2() {
+//        driver = new ChromeDriver();
         driver.get("http://192.168.111.16/litecart/admin/login.php");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        maximize();
+        driver.manage().window().setSize(new Dimension(1440, 860));
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
         loginPass();
+//        driver.close();
+        driver.quit();
+
+//        int seconds = 10;
+//        // Преобразование целочисленного значения в Duration
+//        Duration duration = Duration.ofSeconds(seconds);
+//
+//        driver.get("http://192.168.111.16/litecart/admin/login.php");
+//        driver.manage().window().setSize(new Dimension(1440, 860));
+//
+//        WebDriverWait wait = new WebDriverWait(driver, duration); // Инициализация explicit wait с таймаутом 10 секунд
+//
+//        WebElement usernameInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
+//        usernameInput.click();
+//
+//        WebElement passwordInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
+//        usernameInput.sendKeys("admin");
+//
+//        WebElement loginButton = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("login")));
+//        loginButton.click();
     }
 
     @Test
@@ -134,7 +193,9 @@ public class MainTest extends BasePage.BasePage {
         driverF = new FirefoxDriver();
         driverF.get("http://192.168.111.16/litecart/admin/");
         driverF.manage().window().setSize(new Dimension(1440, 860));
+
         loginPassF();
+
         driverF.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
         driverF.findElement(By.cssSelector("#doc-logotype .name")).click();
         driverF.findElement(By.linkText("Catalog")).click();
@@ -183,6 +244,7 @@ public class MainTest extends BasePage.BasePage {
         driverF.findElement(By.cssSelector("#doc-csv .name")).click();
         driverF.findElement(By.linkText("Users")).click();
         driverF.findElement(By.linkText("vQmods")).click();
+//        driverF.close();
         driverF.quit();
     }
 
@@ -242,6 +304,7 @@ public class MainTest extends BasePage.BasePage {
         driverE.findElement(By.cssSelector("#doc-csv .name")).click();
         driverE.findElement(By.linkText("Users")).click();
         driverE.findElement(By.linkText("vQmods")).click();
+//        driverE.close();
         driverE.quit();
     }
 
