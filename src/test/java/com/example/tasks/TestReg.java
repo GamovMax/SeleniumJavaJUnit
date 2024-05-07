@@ -8,20 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-import static com.example.tasks.MainPage.*;
 
-public class TestReg {
+public class TestReg extends BasePage.BasePage {
 
-    @Before
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-    }
-    @After
-    public void tearDown() {
-        driver.quit();
-
-    }
     @Test
     public void Reg()
     {

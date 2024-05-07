@@ -1,21 +1,14 @@
 package com.example.tasks;
-//import org.seleniumhq.selenium:selenium-devtools-v86:4.13.0;
-//package seleniumhq;
-//import org.junit.Test;
+
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static com.example.tasks.MainPage.driver;
-import static com.example.tasks.MainPage.loginPass;
-
-
-public class TestAbc {
+public class TestAbc extends BasePage.BasePage{
 
 
     @Test

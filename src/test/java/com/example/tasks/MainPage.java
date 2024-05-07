@@ -1,13 +1,5 @@
 package com.example.tasks;
 import com.codeborne.selenide.SelenideElement;
-import org.junit.After;
-import org.junit.Before;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.concurrent.TimeUnit;
-
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -20,7 +12,7 @@ public class MainPage {
   public SelenideElement searchButton = $("[data-test='site-header-search-action']");
   public static final String LOGIN_PASS = "admin";
 
-  public static WebDriver driver;
+  /*public static WebDriver driver;
   public static WebDriver driverF;
   public static WebDriver driverE;
 
@@ -89,5 +81,5 @@ public class MainPage {
     driverE.findElement(By.name("password")).click();
     driverE.findElement(By.name("password")).sendKeys(LOGIN_PASS);
     driverE.findElement(By.name("login")).click();
-  }
+  }*/
 }

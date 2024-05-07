@@ -3,21 +3,15 @@ package com.example.tasks;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-import static com.example.tasks.MainPage.driver;
-import static com.example.tasks.MainPage.loginPass;
-
-public class TestGeo {
+public class TestGeo extends BasePage.BasePage{
 
     @Test
     public void Geo() {
 
-        driver = new ChromeDriver();
+
         driver.get("http://192.168.111.16/litecart/admin/?app=geo_zones&doc=geo_zones");
 
         driver.manage().window().maximize();
@@ -57,8 +51,5 @@ public class TestGeo {
                 System.out.println("Для страны под названием \"" + driver.findElement(By.xpath("//td[@id=\"content\"]//tr[1]//input")).getAttribute("value") + "\" геозоны НЕ расположены в алфавитном порядке.");
             }
         }
-
-        driver.quit();
-
     }
 }

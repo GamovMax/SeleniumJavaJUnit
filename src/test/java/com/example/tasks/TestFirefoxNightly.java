@@ -6,8 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-
-import static com.example.tasks.MainPage.LOGIN_PASS;
+import static constants.Constant.loginpswd.LOGIN_PASS;
+import static BasePage.BasePage.*;
 
 public class TestFirefoxNightly {
 

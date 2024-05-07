@@ -4,11 +4,8 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import static com.example.tasks.MainPage.driver;
-import static com.example.tasks.MainPage.loginPass;
 
-public class TestHeading {
-
+public class TestHeading extends BasePage.BasePage {
 
     @Test
     public void Heading() {
