@@ -115,6 +115,7 @@ public class MainTest extends BasePage.BasePage {
     @Test
     public void test2() {
         driver.get("http://192.168.111.16/litecart/admin/login.php");
+        maximize();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -133,7 +134,8 @@ public class MainTest extends BasePage.BasePage {
     public void fire() {
         driverF = new FirefoxDriver();
         driverF.get("http://192.168.111.16/litecart/admin/");
-        driverF.manage().window().setSize(new Dimension(1440, 860));
+//        driverF.manage().window().setSize(new Dimension(1440, 860));
+        driverF.manage().window().maximize();
         loginPassF();
         driverF.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
         driverF.findElement(By.cssSelector("#doc-logotype .name")).click();
@@ -190,8 +192,9 @@ public class MainTest extends BasePage.BasePage {
     public void Edge() {
         driverE = new EdgeDriver();
         driverE.get("http://192.168.111.16/litecart/admin/");
-        driverE.manage().window().setSize(new Dimension(1440, 860));
+//        driverE.manage().window().setSize(new Dimension(1440, 860));
 
+        driverE.manage().window().maximize();
         loginPassE();
 
         driverE.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
