@@ -67,6 +67,15 @@ public class BasePage {
         driver.findElement(By.name(str)).click();
     }
 
+    public static void click_classname(String str) {
+        driver.findElement(By.className(str)).click();
+    }
+
+    public static void sendKeys_classname(String str1, String str2) {
+        driver.findElement(By.className(str1)).sendKeys(str2);
+    }
+
+
     public static void click_id(String str) {
         driver.findElement(By.id(str)).click();
     }
