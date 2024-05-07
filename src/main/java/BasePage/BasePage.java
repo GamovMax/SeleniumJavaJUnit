@@ -41,7 +41,7 @@ public class BasePage {
         }
     }
 
-    public static boolean is_displayed(String str){ return driver.findElement(By.name(str)).isDisplayed(); }
+    public static boolean is_displayed_name(String str){ return driver.findElement(By.name(str)).isDisplayed(); }
 
     public static void press_down(String str){ driver.findElement(By.name(str)).sendKeys(Keys.ARROW_DOWN); }
 
