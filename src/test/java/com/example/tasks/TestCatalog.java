@@ -1,11 +1,12 @@
 package com.example.tasks;
 import org.junit.Test;
+import static constants.Constant.Urls.URL_CLIENT;
 
 public class TestCatalog extends BasePage.BasePage {
 
     @Test
     public void Heading() {
-        get("http://192.168.111.16/litecart/en/");
+        get(URL_CLIENT);
         maximize();
         findElement_xpath("//div[@id=\"box-most-popular\"]/div/ul/li[1]/a[1]/div[1]/div");
         findElement_xpath("//div[@id=\"box-most-popular\"]/div/ul/li[2]/a[1]/div[1]/div");

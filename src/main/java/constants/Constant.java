@@ -14,5 +14,4 @@ public class Constant {
     public static class loginpswd{
         public static final String LOGIN_PASS = "admin";
     }
-
 }
