@@ -28,6 +28,11 @@ public class BasePage {
         driver.quit();
     }
 
+    public static void findElement_xpath(String str){
+        driver.findElement(By.xpath(str));
+    }
+
+
     public static void click_linkText(String str) {
         driver.findElement(By.linkText(str)).click();
     }
