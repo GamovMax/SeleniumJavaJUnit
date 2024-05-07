@@ -3,11 +3,10 @@ package BasePage;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.concurrent.TimeUnit;
-
 import static constants.Constant.TimeoutVariable.IMPLICIT_WAIT;
 import static constants.Constant.loginpswd.LOGIN_PASS;
 
@@ -32,6 +31,19 @@ public class BasePage {
         driver.findElement(By.xpath(str));
     }
 
+    public static void wait(int number){
+        try {
+            Thread.sleep(number);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static boolean is_displayed(String str){ return driver.findElement(By.name(str)).isDisplayed(); }
+
+    public static void press_down(String str){ driver.findElement(By.name(str)).sendKeys(Keys.ARROW_DOWN); }
+
+    public static void press_enter(String str){ driver.findElement(By.name(str)).sendKeys(Keys.ENTER); }
 
     public static void click_linkText(String str) {
         driver.findElement(By.linkText(str)).click();
