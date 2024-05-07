@@ -7,21 +7,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import static constants.Constant.Urls.URL_ADMIN;
 
 public class TestAbc extends BasePage.BasePage{
-
 
     @Test
     public void Country() {
 
         driver = new ChromeDriver();
-        driver.get("http://192.168.111.16/litecart/admin/?app=countries&doc=countries");
-        //driver.get("http://192.168.111.16/litecart/admin/?app=countries&doc=edit_country&country_code=US");
-        driver.manage().window().maximize();
-
+        get(URL_ADMIN + "?app=countries&doc=countries");
+        maximize();
         loginPass();
-
-
 
         List<String> countries = new ArrayList<>();
         List<String> countriesWithZones = new ArrayList<>();
@@ -49,7 +45,7 @@ public class TestAbc extends BasePage.BasePage{
         }
 
         for (String countryUrl : countriesWithZones) {
-            driver.get(countryUrl);
+            get(countryUrl);
 
 
             //WebElement inpEl = driver.findElement(By.cssSelector("#content > form > table:nth-child(2) > tbody > tr:nth-child(4) > td > input[type=text]"));

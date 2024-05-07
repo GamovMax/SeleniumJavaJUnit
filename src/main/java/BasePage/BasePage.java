@@ -29,9 +29,9 @@ public class BasePage {
         driver.quit();
     }
 
-    public static void findElement_xpath(String str){
-        driver.findElement(By.xpath(str));
-    }
+    public static void findElement_xpath(String str){ driver.findElement(By.xpath(str)); }
+
+    public static void findElement_cssSelector(String str){ driver.findElement(By.cssSelector(str)); }
 
     public static void wait(int number){
         try {
@@ -65,6 +65,10 @@ public class BasePage {
 
     public static void click_name(String str) {
         driver.findElement(By.name(str)).click();
+    }
+
+    public static void click_id(String str) {
+        driver.findElement(By.id(str)).click();
     }
 
     public static void sendKeys_cssSelector(String str1, String str2) {

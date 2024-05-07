@@ -75,7 +75,7 @@ public class MainTest {
     @Test
     public void Edge() {
         driverE = new EdgeDriver();
-        driverE.get("http://192.168.111.16/litecart/admin/");
+        driverE.get(URL_ADMIN);
 //        driverE.manage().window().setSize(new Dimension(1440, 860));
 
         driverE.manage().window().maximize();

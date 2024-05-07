@@ -6,8 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import static constants.Constant.Urls.URL_ADMIN;
 import static constants.Constant.loginpswd.LOGIN_PASS;
-import static BasePage.BasePage.*;
 
 public class TestFirefoxNightly {
 
@@ -19,8 +19,7 @@ public class TestFirefoxNightly {
 
         WebDriver driverN = new FirefoxDriver(options);
 
-        driverN.get("http://192.168.111.16/litecart/admin/");
-        // driverN.manage().window().setSize(new Dimension(1440, 860));
+        driverN.get(URL_ADMIN);
 
         driverN.manage().window().maximize();
         driverN.findElement(By.name("username")).click();

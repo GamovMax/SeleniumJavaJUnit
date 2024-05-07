@@ -2,21 +2,29 @@ package com.example.tasks;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.ArrayList;
 import java.util.List;
+import static constants.Constant.Urls.URL_ADMIN;
+import static constants.Constant.loginpswd.LOGIN_PASS;
 
-public class TestGeo extends BasePage.BasePage{
+public class TestGeo{
 
     @Test
     public void Geo() {
+        WebDriver driver = new ChromeDriver();
 
-
-        driver.get("http://192.168.111.16/litecart/admin/?app=geo_zones&doc=geo_zones");
+        driver.get(URL_ADMIN + "?app=geo_zones&doc=geo_zones");
 
         driver.manage().window().maximize();
 
-        loginPass();
+        driver.findElement(By.name("username")).click();
+        driver.findElement(By.name("username")).sendKeys(LOGIN_PASS);
+        driver.findElement(By.name("password")).click();
+        driver.findElement(By.name("password")).sendKeys(LOGIN_PASS);
+        driver.findElement(By.name("login")).click();
 
         // Находим все ссылки на страны
         List<WebElement> countryLinks = driver.findElements(By.xpath("//td[@id=\"content\"]//td[3]/a"));
@@ -51,5 +59,6 @@ public class TestGeo extends BasePage.BasePage{
                 System.out.println("Для страны под названием \"" + driver.findElement(By.xpath("//td[@id=\"content\"]//tr[1]//input")).getAttribute("value") + "\" геозоны НЕ расположены в алфавитном порядке.");
             }
         }
+        driver.quit();
     }
 }
