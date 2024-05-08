@@ -11,7 +11,7 @@ public class TestCheckoutTask13 extends BasePage.BasePage {
     public void Checkout(){
         get(URL_CLIENT);
         maximize();
-        for (int i=1; i<4; i++)
+        for (int i = 1; i < 4; i++)
         {
             click_cssSelector("li>a.link");
             try {
@@ -30,10 +30,9 @@ public class TestCheckoutTask13 extends BasePage.BasePage {
         }
 
         click_partialLinkText("Checkout");
-        click_cssSelector("ul.shortcuts>li:nth-child(1)");
+//        click_cssSelector("ul.shortcuts>li:nth-child(1)");
 
-        // Бесконечный цикл для проверки отображения элемента
-        for (int i=1; i<4; i++)
+        for (int i = 1; i < 4; i++)
         {
             try {
                 wait(1900);
@@ -51,6 +50,6 @@ public class TestCheckoutTask13 extends BasePage.BasePage {
 
         }
 
-        wait(10000);
+        wait(3000);
     }
 }
