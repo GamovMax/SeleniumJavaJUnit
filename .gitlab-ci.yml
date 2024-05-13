@@ -1,12 +1,12 @@
 stages:
-  - build
+#  - build
   - test
-
-build:
-  stage: build
-  image: maven:latest
-  script:
-    - mvn clean install
+#
+#build:
+#  stage: build
+#  image: maven:latest
+#  script:
+#    - mvn clean install
 
 test:
   stage: test
