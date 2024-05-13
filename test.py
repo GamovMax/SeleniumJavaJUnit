@@ -22,5 +22,5 @@ class Test:
         self.driver.find_element(selenium.webdriver.common.by.By.CSS_SELECTOR, ".verticalMenuNavItem:nth-child(3)").click()      
         self.driver.find_element(selenium.webdriver.common.by.By.CSS_SELECTOR, ".verticalMenuNavItem:nth-child(4)").click()       
         self.driver.find_element(selenium.webdriver.common.by.By.CSS_SELECTOR, ".verticalMenuNavItem:nth-child(5)").click()       
-        self.driver.find_element(selenium.webdriver.common.by.By.CSS_SELECTOR, ".verticalMenuNavItem:nth-child(6)").click()
+        self.driver.find_element(selenium.webdriver.common.by.By.CSS_SELECTOR, ".verticalMenuNavItem:nth-child(66)").click()
         
