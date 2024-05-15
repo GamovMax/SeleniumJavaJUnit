@@ -2,14 +2,9 @@ package com.example.tasks;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
-import java.util.concurrent.TimeUnit;
-
 import static BasePage.BasePage.*;
-import static constants.Constant.TimeoutVariable.IMPLICIT_WAIT;
 import static constants.Constant.Urls.*;
 
 public class MainTest {
