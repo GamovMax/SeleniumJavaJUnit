@@ -1,3 +1,5 @@
+//task15
+
 package com.example.tasks;
 
 import org.openqa.selenium.WebDriver;
@@ -14,7 +16,7 @@ public class RemoteEdgeDriverTest {
         EdgeOptions edgeOptions = new EdgeOptions();
 
         // Указываем адрес удаленного узла Selenium Grid
-        String gridUrl = "http://192.168.111.131:4444/wd/hub";
+        String gridUrl = "http://192.168.111.31:4444/wd/hub";
 
         try {
             // Инициализация драйвера для браузера Mozilla Firefox на удаленном узле
