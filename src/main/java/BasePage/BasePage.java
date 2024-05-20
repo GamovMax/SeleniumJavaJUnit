@@ -48,8 +48,8 @@ public class BasePage {
 
     public static void press_enter(String str){ driver.findElement(By.name(str)).sendKeys(Keys.ENTER); }
 
-    public static void click_linkText(String str) {
-        driver.findElement(By.linkText(str)).click();
+    public static void click_linkText(String link_text) {
+        driver.findElement(By.linkText(link_text)).click();
     }
 
     public static void click_partialLinkText(String str) {
@@ -89,8 +89,12 @@ public class BasePage {
         driver.findElement(By.name(str1)).sendKeys(str2);
     }
 
-    public static void get(String str) {
-        driver.get(str);
+    public static void get(String url) {
+        driver.get(url);
+    }
+
+    public static void back() {
+        driver.navigate().back();
     }
 
     public static void maximize() {
