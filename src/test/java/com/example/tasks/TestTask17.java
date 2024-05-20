@@ -29,10 +29,8 @@ public class TestTask17 extends BasePage.BasePage {
         click_linkText("Duck new_551");
         back();
         click_linkText("Test_Alien");
-        wait(5000);
         back();
         click_linkText("Test_Alien_");
-        wait(5000);
         back();
 
         // Получить логи браузера определенного типа (например, LogType.BROWSER)
@@ -65,6 +63,10 @@ public class TestTask17 extends BasePage.BasePage {
             else if (entry.getLevel().equals(Level.SEVERE)) {
                 System.out.println("Обнаружено сообщение уровня SEVERE в логе браузера: " + entry.getMessage());
                 // Здесь можно добавить соответствующие действия в случае обнаружения сообщения заданного уровня
+            }
+            else if (entry.getLevel().equals("WARNING")) {
+                System.out.println("WARNING log found: " + entry.getMessage());
+                // Дополнительные действия при нахождении WARNING в логе
             }
 
         }
