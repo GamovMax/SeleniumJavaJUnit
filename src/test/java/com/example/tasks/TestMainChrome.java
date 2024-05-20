@@ -9,7 +9,7 @@ public class TestMainChrome extends BasePage.BasePage{
     public void testMethod() {
         get("https://translate.yandex.ru/?source_lang=en&target_lang=ru");
         wait(2000);
-        maximize();
+        //maximize();
         wait(2000);
         click_cssSelector(".verticalMenuNavItem:nth-child(2)");
         wait(2000);
@@ -26,7 +26,7 @@ public class TestMainChrome extends BasePage.BasePage{
     @Test
     public void test1() {
         get(URL_ADMIN);
-        maximize();
+        //maximize();
         loginPass();
         click_xpath("//li[@id=\'app-\']/a/span[2]");
         click_cssSelector("#doc-logotype .name");
@@ -82,9 +82,9 @@ public class TestMainChrome extends BasePage.BasePage{
     @Test
     public void test2() {
         get(URL_ADMIN + "login.php");
-        maximize();
+        //maximize();
         wait(2000);
-        maximize();
+        //maximize();
         wait(2000);
         loginPass();
     }

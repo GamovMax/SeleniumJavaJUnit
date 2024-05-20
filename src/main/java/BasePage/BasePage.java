@@ -22,6 +22,7 @@ public class BasePage {
     public void setUp() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
+        maximize();
     }
 
     @After

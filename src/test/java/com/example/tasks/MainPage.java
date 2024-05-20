@@ -56,7 +56,7 @@ public class MainPage {
   }
 
   public static void maximize() {
-    driver.manage().window().maximize();
+    driver.manage().window().//maximize();
   }
 
   public static void loginPass() {

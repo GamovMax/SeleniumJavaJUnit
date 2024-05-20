@@ -16,7 +16,7 @@ public class TestAbc extends BasePage.BasePage{
 
         driver = new ChromeDriver();
         get(URL_ADMIN + "?app=countries&doc=countries");
-        maximize();
+        //maximize();
         loginPass();
 
         List<String> countries = new ArrayList<>();

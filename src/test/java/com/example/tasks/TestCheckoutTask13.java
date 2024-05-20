@@ -10,7 +10,7 @@ public class TestCheckoutTask13 extends BasePage.BasePage {
     @Test
     public void Checkout(){
         get(URL_CLIENT);
-        maximize();
+        //maximize();
         for (int i = 1; i < 4; i++)
         {
             click_cssSelector("li>a.link");

@@ -9,7 +9,7 @@ public class TestHeading extends BasePage.BasePage {
     public void Heading() {
         
         get(URL_ADMIN);
-        maximize();
+        //maximize();
         loginPass();
         click_xpath("//li[@id=\'app-\']/a/span[2]");
         findElement_cssSelector("h1");

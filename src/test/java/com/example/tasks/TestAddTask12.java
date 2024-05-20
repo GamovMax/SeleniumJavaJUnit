@@ -11,7 +11,7 @@ public class TestAddTask12 extends BasePage.BasePage {
 
         get(URL_ADMIN);
 
-        maximize();
+        //maximize();
         loginPass();
 
         click_linkText("Catalog");

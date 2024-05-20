@@ -7,7 +7,7 @@ public class TestFirstTask2 extends BasePage.BasePage {
     @Test
     public void task2() {
         get(URL_ADMIN + "login.php");
-        maximize();
+        //maximize();
         loginPass();
     }
 }

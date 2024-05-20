@@ -10,9 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.File;
 import java.io.IOException;
 
-import static com.example.tasks.MainPage.driver;
-
-
 public class TestHAR {
 
 

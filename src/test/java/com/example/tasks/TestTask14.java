@@ -16,7 +16,7 @@ public class TestTask14 extends BasePage.BasePage{
 //        !!!Сделать цикл с параметром (for)!!!
 
         get(URL_ADMIN);
-        maximize();
+        //maximize();
         loginPass();
         click_linkText("Countries");
         click_linkText("Add New Country");

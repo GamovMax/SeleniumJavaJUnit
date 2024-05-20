@@ -11,7 +11,7 @@ public class TestReg extends BasePage.BasePage {
     public void Reg()
     {
         get(URL_CLIENT);
-        maximize();
+        //maximize();
 
         click_cssSelector("form[name='login_form'] > table > tbody > tr:nth-child(5) > td > a");
 

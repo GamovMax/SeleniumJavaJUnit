@@ -89,7 +89,7 @@ public class MainTest_old extends BasePage.BasePage {
         driver.get("http://192.168.111.16/litecart/admin/");
 //        driver.manage().window().setSize(new Dimension(1440, 860));
 
-        maximize();
+        //maximize();
         loginPass();
 
 //        driver.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();

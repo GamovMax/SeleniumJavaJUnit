@@ -11,7 +11,7 @@ public class TestPrice extends BasePage.BasePage{
     @Test
     public void Price() {
         get(URL_CLIENT);
-        maximize();
+        //maximize();
         WebElement element_n1 = driver.findElement(By.cssSelector("a.link[title='Yellow Duck']>div.name"));
         WebElement element_n2 = driver.findElement(By.cssSelector("a.link[title='Green Duck']>div.name"));
         WebElement element_p1_1 = driver.findElement(By.cssSelector("a.link[title='Yellow Duck']>div.price-wrapper>s.regular-price"));
@@ -41,7 +41,7 @@ public class TestPrice extends BasePage.BasePage{
     @Test
     public void PriceF() {
         get(URL_CLIENT);
-        maximize();
+        //maximize();
 
         WebElement element_n1 = driver.findElement(By.cssSelector("a.link[title='Yellow Duck']>div.name"));
         WebElement element_n2 = driver.findElement(By.cssSelector("a.link[title='Green Duck']>div.name"));
@@ -82,7 +82,7 @@ public class TestPrice extends BasePage.BasePage{
     public void PriceE() {
 
         get(URL_CLIENT);
-        maximize();
+        //maximize();
 
         WebElement element_n1 = driver.findElement(By.cssSelector("a.link[title='Yellow Duck']>div.name"));
         WebElement element_n2 = driver.findElement(By.cssSelector("a.link[title='Green Duck']>div.name"));

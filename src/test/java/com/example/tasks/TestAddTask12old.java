@@ -19,8 +19,8 @@ public class TestAddTask12old extends BasePage.BasePage {
     public void Add(){
 //        driver.get("http://192.168.111.16/litecart/admin/login.php");
         get("http://192.168.111.16/litecart/admin/login.php");
-//        driver.manage().window().maximize();
-        maximize();
+//        driver.manage().window().//maximize();
+        //maximize();
         loginPass();
 
 //        driver.findElement(By.linkText("Catalog")).click();
