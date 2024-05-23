@@ -1,5 +1,4 @@
 package com.example.tasks;
-import org.junit.Assume;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -10,7 +9,6 @@ public class TestCheckoutTask13 extends BasePage.BasePage {
     @Test
     public void Checkout(){
         get(URL_CLIENT);
-        //maximize();
         for (int i = 1; i < 4; i++)
         {
             click_cssSelector("li>a.link");
