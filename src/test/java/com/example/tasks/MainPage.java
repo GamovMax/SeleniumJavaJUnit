@@ -13,8 +13,8 @@ public class MainPage {
   public static final String LOGIN_PASS = "admin";
 
   /*public static WebDriver driver;
-  public static WebDriver driverF;
-  public static WebDriver driverE;
+  public static WebDriver driverFirefox;
+  public static WebDriver driverEdge;
 
   @Before
   public void setUp() {
@@ -67,19 +67,19 @@ public class MainPage {
     driver.findElement(By.name("login")).click();
   }
 
-  public static void loginPassF() {
-    driverF.findElement(By.name("username")).click();
-    driverF.findElement(By.name("username")).sendKeys(LOGIN_PASS);
-    driverF.findElement(By.name("password")).click();
-    driverF.findElement(By.name("password")).sendKeys(LOGIN_PASS);
-    driverF.findElement(By.name("login")).click();
+  public static void loginPassFirefox() {
+    driverFirefox.findElement(By.name("username")).click();
+    driverFirefox.findElement(By.name("username")).sendKeys(LOGIN_PASS);
+    driverFirefox.findElement(By.name("password")).click();
+    driverFirefox.findElement(By.name("password")).sendKeys(LOGIN_PASS);
+    driverFirefox.findElement(By.name("login")).click();
   }
 
-  public static void loginPassE() {
-    driverE.findElement(By.name("username")).click();
-    driverE.findElement(By.name("username")).sendKeys(LOGIN_PASS);
-    driverE.findElement(By.name("password")).click();
-    driverE.findElement(By.name("password")).sendKeys(LOGIN_PASS);
-    driverE.findElement(By.name("login")).click();
+  public static void loginPassEdge() {
+    driverEdge.findElement(By.name("username")).click();
+    driverEdge.findElement(By.name("username")).sendKeys(LOGIN_PASS);
+    driverEdge.findElement(By.name("password")).click();
+    driverEdge.findElement(By.name("password")).sendKeys(LOGIN_PASS);
+    driverEdge.findElement(By.name("login")).click();
   }*/
 }

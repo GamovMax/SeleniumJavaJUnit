@@ -4,10 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import static constants.Constant.Urls.URL_CLIENT;
 
-public class TestCheckoutTask13 extends BasePage.BasePage {
+public class TestTask13 extends BasePage.BasePage {
 
     @Test
-    public void Checkout(){
+    public void Task13(){
         get(URL_CLIENT);
         for (int i = 1; i < 4; i++)
         {

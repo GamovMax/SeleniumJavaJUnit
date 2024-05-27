@@ -15,8 +15,8 @@ import static constants.Constant.loginpswd.LOGIN_PASS;
 public class BasePage {
 
     public static WebDriver driver;
-    public static WebDriver driverF;
-    public static WebDriver driverE;
+    public static WebDriver driverFirefox;
+    public static WebDriver driverEdge;
 
     @Before
     public void setUp() {
@@ -30,63 +30,63 @@ public class BasePage {
         driver.quit();
     }
 
-    public static void findElement_xpath(String str){ driver.findElement(By.xpath(str)); }
+    public static void findElement_xpath(String locatorxpath){ driver.findElement(By.xpath(locatorxpath)); }
 
-    public static void findElement_cssSelector(String str){ driver.findElement(By.cssSelector(str)); }
+    public static void findElement_cssSelector(String locatorcssSelector){ driver.findElement(By.cssSelector(locatorcssSelector)); }
 
-    public static void wait(int number){
+    public static void wait(int numberofseconds){
         try {
-            Thread.sleep(number);
+            Thread.sleep(numberofseconds);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static boolean is_displayed_name(String str){ return driver.findElement(By.name(str)).isDisplayed(); }
+    public static boolean is_displayed_name(String locatorname){ return driver.findElement(By.name(locatorname)).isDisplayed(); }
 
-    public static void press_down(String str){ driver.findElement(By.name(str)).sendKeys(Keys.ARROW_DOWN); }
+    public static void press_down(String locatorname){ driver.findElement(By.name(locatorname)).sendKeys(Keys.ARROW_DOWN); }
 
-    public static void press_enter(String str){ driver.findElement(By.name(str)).sendKeys(Keys.ENTER); }
+    public static void press_enter(String locatorname){ driver.findElement(By.name(locatorname)).sendKeys(Keys.ENTER); }
 
     public static void click_linkText(String link_text) {
         driver.findElement(By.linkText(link_text)).click();
     }
 
-    public static void click_partialLinkText(String str) {
-        driver.findElement(By.partialLinkText(str)).click();
+    public static void click_partialLinkText(String locatorpartialLinkText) {
+        driver.findElement(By.partialLinkText(locatorpartialLinkText)).click();
     }
 
-    public static void click_xpath(String str) {
-        driver.findElement(By.xpath(str)).click();
+    public static void click_xpath(String locatorxpath) {
+        driver.findElement(By.xpath(locatorxpath)).click();
     }
 
-    public static void click_cssSelector(String str) {
-        driver.findElement(By.cssSelector(str)).click();
+    public static void click_cssSelector(String locatorcssSelector) {
+        driver.findElement(By.cssSelector(locatorcssSelector)).click();
     }
 
-    public static void click_name(String str) {
-        driver.findElement(By.name(str)).click();
+    public static void click_name(String locatorname) {
+        driver.findElement(By.name(locatorname)).click();
     }
 
-    public static void click_classname(String str) {
-        driver.findElement(By.className(str)).click();
+    public static void click_classname(String locatorclassname) {
+        driver.findElement(By.className(locatorclassname)).click();
     }
 
-    public static void sendKeys_classname(String str1, String str2) {
-        driver.findElement(By.className(str1)).sendKeys(str2);
+    public static void sendKeys_classname(String locatorclassname, String string) {
+        driver.findElement(By.className(locatorclassname)).sendKeys(string);
     }
 
 
-    public static void click_id(String str) {
-        driver.findElement(By.id(str)).click();
+    public static void click_id(String locatorid) {
+        driver.findElement(By.id(locatorid)).click();
     }
 
-    public static void sendKeys_cssSelector(String str1, String str2) {
-        driver.findElement(By.cssSelector(str1)).sendKeys(str2);
+    public static void sendKeys_cssSelector(String locatorcssSelector, String string) {
+        driver.findElement(By.cssSelector(locatorcssSelector)).sendKeys(string);
     }
 
-    public static void sendKeys_name(String str1, String str2) {
-        driver.findElement(By.name(str1)).sendKeys(str2);
+    public static void sendKeys_name(String locatorname, String string) {
+        driver.findElement(By.name(locatorname)).sendKeys(string);
     }
 
     public static void get(String url) {
@@ -109,19 +109,19 @@ public class BasePage {
         driver.findElement(By.name("login")).click();
     }
 
-    public static void loginPassF() {
-        driverF.findElement(By.name("username")).click();
-        driverF.findElement(By.name("username")).sendKeys(LOGIN_PASS);
-        driverF.findElement(By.name("password")).click();
-        driverF.findElement(By.name("password")).sendKeys(LOGIN_PASS);
-        driverF.findElement(By.name("login")).click();
+    public static void loginPassFirefox() {
+        driverFirefox.findElement(By.name("username")).click();
+        driverFirefox.findElement(By.name("username")).sendKeys(LOGIN_PASS);
+        driverFirefox.findElement(By.name("password")).click();
+        driverFirefox.findElement(By.name("password")).sendKeys(LOGIN_PASS);
+        driverFirefox.findElement(By.name("login")).click();
     }
 
-    public static void loginPassE() {
-        driverE.findElement(By.name("username")).click();
-        driverE.findElement(By.name("username")).sendKeys(LOGIN_PASS);
-        driverE.findElement(By.name("password")).click();
-        driverE.findElement(By.name("password")).sendKeys(LOGIN_PASS);
-        driverE.findElement(By.name("login")).click();
+    public static void loginPassEdge() {
+        driverEdge.findElement(By.name("username")).click();
+        driverEdge.findElement(By.name("username")).sendKeys(LOGIN_PASS);
+        driverEdge.findElement(By.name("password")).click();
+        driverEdge.findElement(By.name("password")).sendKeys(LOGIN_PASS);
+        driverEdge.findElement(By.name("login")).click();
     }
 }
