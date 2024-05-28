@@ -4,14 +4,13 @@ import java.util.Random;
 
 import static constants.Constant.Urls.URL_ADMIN;
 
-public class TestAddTask12 extends BasePage.BasePage {
+public class TestTask12 extends BasePage.BasePage {
 
     @Test
     public void Add(){
 
         get(URL_ADMIN);
 
-        //maximize();
         loginPass();
 
         click_linkText("Catalog");

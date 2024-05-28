@@ -1,26 +1,12 @@
 package com.example.tasks;
-
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
 
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
-import org.junit.runners.Suite.SuiteClasses;
-
-@RunWith(Suite.class)
-@SuiteClasses({
-        TestTask13.class,
-        TestTask14.class,
-        TestTask16.class,
-        TestTask17.class,
-        TestTask18.class,
-        TestTask19.class
-})
-public class TestRunner {
+public class TestRunner_old {
 
     public static void main(String[] args) {
-        Result result = JUnitCore.runClasses(TestRunner.class);
+        Result result = JUnitCore.runClasses(TestTask13.class);
 
         for (Failure failure : result.getFailures()) {
             System.out.println(failure.toString());
