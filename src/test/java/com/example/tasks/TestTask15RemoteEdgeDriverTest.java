@@ -1,5 +1,3 @@
-//task15
-
 package com.example.tasks;
 
 import org.openqa.selenium.WebDriver;
@@ -9,7 +7,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class RemoteEdgeDriverTest {
+public class TestTask15RemoteEdgeDriverTest {
     public static void main(String[] args) {
         WebDriver driver;
 //        FirefoxOptions firefoxOptions = new FirefoxOptions();

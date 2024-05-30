@@ -1,5 +1,3 @@
-//task15
-
 package com.example.tasks;
 
 import org.openqa.selenium.WebDriver;
@@ -8,7 +6,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.URL;
 
-public class RemoteTest {
+public class TestTask15RemoteTest {
     public static void main(String[] args) {
         WebDriver driver;
         DesiredCapabilities capabilities = new DesiredCapabilities();

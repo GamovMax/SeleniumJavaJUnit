@@ -1,3 +1,5 @@
+//        !!!Сделать цикл с параметром (for)!!!
+
 package com.example.tasks;
 
 import org.junit.Test;

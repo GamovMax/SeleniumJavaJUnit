@@ -1,11 +1,10 @@
-//task11
 package com.example.tasks;
 
 import org.junit.*;
 import java.util.Random;
 import static constants.Constant.Urls.URL_CLIENT;
 
-public class TestReg extends BasePage.BasePage {
+public class TestTask11TestReg extends BasePage.BasePage {
 
     @Test
     public void Reg()

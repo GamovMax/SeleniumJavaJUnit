@@ -10,6 +10,9 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({
+        TestTask2.class,
+        TestTask11TestReg.class,
+        TestTask12.class,
         TestTask13.class,
         TestTask14.class,
         TestTask16.class,
