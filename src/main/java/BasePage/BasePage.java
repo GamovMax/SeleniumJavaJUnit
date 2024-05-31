@@ -30,7 +30,7 @@ public class BasePage {
         driverChrome.quit();
     }
 
-    public static void findElementXpath(String locatorxpath){ driverChrome.findElement(By.xpath(locatorxpath)); }
+    public static void findElementXpath(String locatorXpath){ driverChrome.findElement(By.xpath(locatorXpath)); }
 
     public static void findElementCssSelector(String locatorCssSelector){ driverChrome.findElement(By.cssSelector(locatorCssSelector)); }
 
@@ -56,8 +56,8 @@ public class BasePage {
         driverChrome.findElement(By.partialLinkText(locatorPartialLinkText)).click();
     }
 
-    public static void clickXpath(String locatorxpath) {
-        driverChrome.findElement(By.xpath(locatorxpath)).click();
+    public static void clickXpath(String locatorXpath) {
+        driverChrome.findElement(By.xpath(locatorXpath)).click();
     }
 
     public static void clickCssSelector(String locatorCssSelector) {
