@@ -13,28 +13,28 @@ public class TestTask17 extends BasePage.BasePage {
     public void Task17()
     {
         get("http://192.168.111.16/litecart/admin/?app=catalog&doc=catalog&category_id=1");
-        loginPass();
-        click_linkText("Blue Duck");
+        loginPassChrome();
+        clickLinkText("Blue Duck");
         back();
-        click_linkText("Green Duck");
+        clickLinkText("Green Duck");
         back();
-        click_linkText("Purple Duck");
+        clickLinkText("Purple Duck");
         back();
-        click_linkText("Red Duck");
+        clickLinkText("Red Duck");
         back();
-        click_linkText("Yellow Duck");
+        clickLinkText("Yellow Duck");
         back();
-        click_linkText("Duck new");
+        clickLinkText("Duck new");
         back();
-        click_linkText("Duck new_551");
+        clickLinkText("Duck new_551");
         back();
-        click_linkText("Test_Alien");
+        clickLinkText("Test_Alien");
         back();
-        click_linkText("Test_Alien_");
+        clickLinkText("Test_Alien_");
         back();
 
         // Получить логи браузера определенного типа (например, LogType.BROWSER)
-        LogEntries logs = driver.manage().logs().get(LogType.BROWSER);
+        LogEntries logs = driverChrome.manage().logs().get(LogType.BROWSER);
 
         // Проверить, что в логах отсутствуют сообщения указанного уровня (например, WARNING)
         for (LogEntry entry : logs) {

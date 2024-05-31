@@ -27,27 +27,27 @@ public class MainPage {
 
   }
 
-  public static void click_linkText(String str) {
+  public static void clickLinkText(String str) {
     driver.findElement(By.linkText(str)).click();
   }
 
-  public static void click_partialLinkText(String str) {
+  public static void clickPartialLinkText(String str) {
     driver.findElement(By.partialLinkText(str)).click();
   }
 
-  public static void click_cssSelector(String str) {
+  public static void clickCssSelector(String str) {
     driver.findElement(By.cssSelector(str)).click();
   }
 
-  public static void click_name(String str) {
+  public static void clickName(String str) {
     driver.findElement(By.name(str)).click();
   }
 
-  public static void sendKeys_cssSelector(String str1, String str2) {
+  public static void sendKeysCssSelector(String str1, String str2) {
     driver.findElement(By.cssSelector(str1)).sendKeys(str2);
   }
 
-  public static void sendKeys_name(String str1, String str2) {
+  public static void sendKeysName(String str1, String str2) {
     driver.findElement(By.name(str1)).sendKeys(str2);
   }
 

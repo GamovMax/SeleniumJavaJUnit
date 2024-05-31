@@ -19,16 +19,15 @@ public class TestTask12old extends BasePage.BasePage {
     public void Add(){
 //        driver.get("http://192.168.111.16/litecart/admin/login.php");
         get("http://192.168.111.16/litecart/admin/login.php");
-//        driver.manage().window().//maximize();
-        //maximize();
-        loginPass();
+//        driver.manage().window().
+        loginPassChrome();
 
 //        driver.findElement(By.linkText("Catalog")).click();
-        click_linkText("Catalog");
+        clickLinkText("Catalog");
 //        driver.findElement(By.partialLinkText("dd New Produc")).click();
-        click_partialLinkText("dd New Produc");
+        clickPartialLinkText("dd New Produc");
 //        driver.findElement(By.cssSelector("input[data-type=\"toggle\"][value=\"1\"]")).click();
-        click_cssSelector("input[data-type=\"toggle\"][value=\"1\"]");
+        clickCssSelector("input[data-type=\"toggle\"][value=\"1\"]");
 
         Random random = new Random();
         int randomNumber = random.nextInt(1000000000);
@@ -36,28 +35,28 @@ public class TestTask12old extends BasePage.BasePage {
         String name = "Name" + randomNumber;
 
 //        driver.findElement(By.cssSelector("input[name='name[en]']")).click();
-        click_cssSelector("input[name='name[en]']");
+        clickCssSelector("input[name='name[en]']");
 //        driver.findElement(By.cssSelector("input[name='name[en]']")).sendKeys(name);
-        sendKeys_cssSelector("input[name='name[en]']", name);
+        sendKeysCssSelector("input[name='name[en]']", name);
 
 //        driver.findElement(By.linkText("Information")).click();
-        click_linkText("Information");
+        clickLinkText("Information");
 
 //        driver.findElement(By.name("keywords")).click();
-        click_name("keywords");
+        clickName("keywords");
 //        driver.findElement(By.name("keywords")).sendKeys(name);
-        sendKeys_name("keywords", name);
+        sendKeysName("keywords", name);
 
 //        driver.findElement(By.linkText("Prices")).click();
-        click_linkText("Prices");
+        clickLinkText("Prices");
 
 //        driver.findElement(By.name("gross_prices[USD]")).click();
-        click_name("gross_prices[USD]");
+        clickName("gross_prices[USD]");
 //        driver.findElement(By.name("gross_prices[USD]")).sendKeys("1");
-        sendKeys_name("gross_prices[USD]", "1");
+        sendKeysName("gross_prices[USD]", "1");
 
 //        driver.findElement(By.name("save")).click();
-        click_name("save");
+        clickName("save");
 
 //        try {
 //            Thread.sleep(2000);

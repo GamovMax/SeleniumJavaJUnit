@@ -11,38 +11,38 @@ public class TestTask13 extends BasePage.BasePage {
         get(URL_CLIENT);
         for (int i = 1; i < 4; i++)
         {
-            click_cssSelector("li>a.link");
+            clickCssSelector("li>a.link");
             try {
-                if (is_displayed_name("options[Size]")) {
-                    click_name("options[Size]");
-                    press_down("options[Size]");
-                    press_enter("options[Size]");
-                    click_name("add_cart_product");
+                if (isDisplayedName("options[Size]")) {
+                    clickName("options[Size]");
+                    pressDown("options[Size]");
+                    pressEnter("options[Size]");
+                    clickName("add_cart_product");
                 }
             } catch (NoSuchElementException e) {
                 // обработка ситуации, когда элемент не был найден
-                click_name("add_cart_product");
+                clickName("add_cart_product");
             }
             wait(1000);
-            click_linkText("Home");
+            clickLinkText("Home");
         }
 
-        click_partialLinkText("Checkout");
-//        click_cssSelector("ul.shortcuts>li:nth-child(1)");
+        clickPartialLinkText("Checkout");
+//        clickCssSelector("ul.shortcuts>li:nth-child(1)");
 
         for (int i = 1; i < 4; i++)
         {
             try {
                 wait(1900);
-                click_name("remove_cart_item");
+                clickName("remove_cart_item");
             }
             catch (Exception e){
 
                 try {
-                    driver.findElement(By.linkText("<< Back")).click();
+                    driverChrome.findElement(By.linkText("<< Back")).click();
                 }
                 catch (Exception a){
-                    click_partialLinkText("Checkout");
+                    clickPartialLinkText("Checkout");
                 }
             }
 

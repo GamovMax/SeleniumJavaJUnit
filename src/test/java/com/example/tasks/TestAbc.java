@@ -14,15 +14,14 @@ public class TestAbc extends BasePage.BasePage{
     @Test
     public void Country() {
 
-        driver = new ChromeDriver();
+        driverChrome = new ChromeDriver();
         get(URL_ADMIN + "?app=countries&doc=countries");
-        //maximize();
-        loginPass();
+        loginPassChrome();
 
         List<String> countries = new ArrayList<>();
         List<String> countriesWithZones = new ArrayList<>();
 
-        List<WebElement> countryRows = driver.findElements(By.cssSelector("table tr.row"));
+        List<WebElement> countryRows = driverChrome.findElements(By.cssSelector("table tr.row"));
 
         for (WebElement row : countryRows) {
             WebElement countryLink = row.findElement(By.cssSelector("td:nth-child(5) a"));
@@ -48,15 +47,15 @@ public class TestAbc extends BasePage.BasePage{
             get(countryUrl);
 
 
-            //WebElement inpEl = driver.findElement(By.cssSelector("#content > form > table:nth-child(2) > tbody > tr:nth-child(4) > td > input[type=text]"));
-            //WebElement inpEl = driver.findElement(By.xpath("//td[@id=\"content\"]/form/table[1]/tbody/tr[4]/td/input"));
-            WebElement inpEl = driver.findElement(By.xpath("//td[@id=\"content\"]//tr[4]//input"));
-            //WebElement inpEl = driver.findElement(By.xpath("//input[@value=\"United States\"]"));
-            //WebElement inpEl = driver.findElement(By.xpath("//input[@value='United States']"));
+            //WebElement inpEl = driverChrome.findElement(By.cssSelector("#content > form > table:nth-child(2) > tbody > tr:nth-child(4) > td > input[type=text]"));
+            //WebElement inpEl = driverChrome.findElement(By.xpath("//td[@id=\"content\"]/form/table[1]/tbody/tr[4]/td/input"));
+            WebElement inpEl = driverChrome.findElement(By.xpath("//td[@id=\"content\"]//tr[4]//input"));
+            //WebElement inpEl = driverChrome.findElement(By.xpath("//input[@value=\"United States\"]"));
+            //WebElement inpEl = driverChrome.findElement(By.xpath("//input[@value='United States']"));
             String str = inpEl.getAttribute("value");
             List<String> names = new ArrayList<>();
 
-            List<WebElement> nameInputs = driver.findElements(By.cssSelector("table#table-zones input[name^='zones'][name$='[name]']"));
+            List<WebElement> nameInputs = driverChrome.findElements(By.cssSelector("table#table-zones input[name^='zones'][name$='[name]']"));
 
             for (WebElement nameInput : nameInputs) {
                 String name = nameInput.getAttribute("value");
@@ -76,7 +75,7 @@ public class TestAbc extends BasePage.BasePage{
                 }
             }
 
-            driver.quit();
+            driverChrome.quit();
 
     }
 }

@@ -14,99 +14,98 @@ import static constants.Constant.loginpswd.LOGIN_PASS;
 
 public class BasePage {
 
-    public static WebDriver driver;
+    public static WebDriver driverChrome;
     public static WebDriver driverFirefox;
     public static WebDriver driverEdge;
 
     @Before
     public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
+        driverChrome = new ChromeDriver();
+        driverChrome.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
         maximize();
     }
 
     @After
     public void tearDown() {
-        driver.quit();
+        driverChrome.quit();
     }
 
-    public static void findElement_xpath(String locatorxpath){ driver.findElement(By.xpath(locatorxpath)); }
+    public static void findElementXpath(String locatorxpath){ driverChrome.findElement(By.xpath(locatorxpath)); }
 
-    public static void findElement_cssSelector(String locatorcssSelector){ driver.findElement(By.cssSelector(locatorcssSelector)); }
+    public static void findElementCssSelector(String locatorCssSelector){ driverChrome.findElement(By.cssSelector(locatorCssSelector)); }
 
-    public static void wait(int numberofseconds){
+    public static void wait(int numberOfSeconds){
         try {
-            Thread.sleep(numberofseconds);
+            Thread.sleep(numberOfSeconds);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public static boolean is_displayed_name(String locatorname){ return driver.findElement(By.name(locatorname)).isDisplayed(); }
+    public static boolean isDisplayedName(String locatorName){ return driverChrome.findElement(By.name(locatorName)).isDisplayed(); }
 
-    public static void press_down(String locatorname){ driver.findElement(By.name(locatorname)).sendKeys(Keys.ARROW_DOWN); }
+    public static void pressDown(String locatorName){ driverChrome.findElement(By.name(locatorName)).sendKeys(Keys.ARROW_DOWN); }
 
-    public static void press_enter(String locatorname){ driver.findElement(By.name(locatorname)).sendKeys(Keys.ENTER); }
+    public static void pressEnter(String locatorName){ driverChrome.findElement(By.name(locatorName)).sendKeys(Keys.ENTER); }
 
-    public static void click_linkText(String link_text) {
-        driver.findElement(By.linkText(link_text)).click();
+    public static void clickLinkText(String locatorLinkText) {
+        driverChrome.findElement(By.linkText(locatorLinkText)).click();
     }
 
-    public static void click_partialLinkText(String locatorpartialLinkText) {
-        driver.findElement(By.partialLinkText(locatorpartialLinkText)).click();
+    public static void clickPartialLinkText(String locatorPartialLinkText) {
+        driverChrome.findElement(By.partialLinkText(locatorPartialLinkText)).click();
     }
 
-    public static void click_xpath(String locatorxpath) {
-        driver.findElement(By.xpath(locatorxpath)).click();
+    public static void clickXpath(String locatorxpath) {
+        driverChrome.findElement(By.xpath(locatorxpath)).click();
     }
 
-    public static void click_cssSelector(String locatorcssSelector) {
-        driver.findElement(By.cssSelector(locatorcssSelector)).click();
+    public static void clickCssSelector(String locatorCssSelector) {
+        driverChrome.findElement(By.cssSelector(locatorCssSelector)).click();
     }
 
-    public static void click_name(String locatorname) {
-        driver.findElement(By.name(locatorname)).click();
+    public static void clickName(String locatorName) {
+        driverChrome.findElement(By.name(locatorName)).click();
     }
 
-    public static void click_classname(String locatorclassname) {
-        driver.findElement(By.className(locatorclassname)).click();
+    public static void clickClassName(String locatorClassName) {
+        driverChrome.findElement(By.className(locatorClassName)).click();
     }
 
-    public static void sendKeys_classname(String locatorclassname, String string) {
-        driver.findElement(By.className(locatorclassname)).sendKeys(string);
+    public static void sendKeysClassName(String locatorClassName, String string) {
+        driverChrome.findElement(By.className(locatorClassName)).sendKeys(string);
     }
 
-
-    public static void click_id(String locatorid) {
-        driver.findElement(By.id(locatorid)).click();
+    public static void clickId(String locatorId) {
+        driverChrome.findElement(By.id(locatorId)).click();
     }
 
-    public static void sendKeys_cssSelector(String locatorcssSelector, String string) {
-        driver.findElement(By.cssSelector(locatorcssSelector)).sendKeys(string);
+    public static void sendKeysCssSelector(String locatorCssSelector, String string) {
+        driverChrome.findElement(By.cssSelector(locatorCssSelector)).sendKeys(string);
     }
 
-    public static void sendKeys_name(String locatorname, String string) {
-        driver.findElement(By.name(locatorname)).sendKeys(string);
+    public static void sendKeysName(String locatorName, String string) {
+        driverChrome.findElement(By.name(locatorName)).sendKeys(string);
     }
 
     public static void get(String url) {
-        driver.get(url);
+        driverChrome.get(url);
     }
 
     public static void back() {
-        driver.navigate().back();
+        driverChrome.navigate().back();
     }
 
     public static void maximize() {
-        driver.manage().window().maximize();
+        driverChrome.manage().window().maximize();
     }
 
-    public static void loginPass() {
-        driver.findElement(By.name("username")).click();
-        driver.findElement(By.name("username")).sendKeys(LOGIN_PASS);
-        driver.findElement(By.name("password")).click();
-        driver.findElement(By.name("password")).sendKeys(LOGIN_PASS);
-        driver.findElement(By.name("login")).click();
+    public static void loginPassChrome() {
+        driverChrome.findElement(By.name("username")).click();
+        driverChrome.findElement(By.name("username")).sendKeys(LOGIN_PASS);
+        driverChrome.findElement(By.name("password")).click();
+        driverChrome.findElement(By.name("password")).sendKeys(LOGIN_PASS);
+        driverChrome.findElement(By.name("login")).click();
     }
 
     public static void loginPassFirefox() {

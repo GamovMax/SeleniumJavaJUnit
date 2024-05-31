@@ -13,8 +13,8 @@ public class MainTest_old extends BasePage.BasePage {
 
 //    @Before
 //    public void setUp() {
-//        //System.setProperty("webdriver.chrome.driver", "path_to_chromedriver");
-//        //driver = new ChromeDriver();
+//        //System.setProperty("webdriverChrome.chrome.driverChrome", "path_to_chromedriverChrome");
+//        //driverChrome = new ChromedriverChrome();
 //        //Map<String, Object> vars = new HashMap<String, Object>();
 //
 //    }
@@ -26,157 +26,155 @@ public class MainTest_old extends BasePage.BasePage {
 //        //scanner.nextLine(); // Этот метод будет ожидать нажатия клавиши Enter
 //        //System.out.println("Автотест завершён!");
 //
-//        //WebDriverWait wait;
-//        //wait = new WebDriverWait(driver,1000);
+//        //WebdriverChromeWait wait;
+//        //wait = new WebdriverChromeWait(driverChrome,1000);
 //        //Alert prompt = null;
 //        //prompt.sendKeys("Для завершения автотеста нажмите кнопку 'Ок'");
-//        driver.quit();
+//        driverChrome.quit();
 //    }
 
     @Test
     public void testMethod() {
 
-//        driver = new ChromeDriver();
-        driver.get("https://translate.yandex.ru/?source_lang=en&target_lang=ru");
+//        driverChrome = new ChromedriverChrome();
+        driverChrome.get("https://translate.yandex.ru/?source_lang=en&target_lang=ru");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.manage().window().setSize(new Dimension(1050, 735));
+        driverChrome.manage().window().setSize(new Dimension(1050, 735));
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(2)")).click();
+        driverChrome.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(2)")).click();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(3)")).click();
+        driverChrome.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(3)")).click();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(4)")).click();
+        driverChrome.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(4)")).click();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(5)")).click();
+        driverChrome.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(5)")).click();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(6)")).click();
+        driverChrome.findElement(By.cssSelector(".verticalMenuNavItem:nth-child(6)")).click();
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-//        driver.close();
-        driver.quit();
+//        driverChrome.close();
+        driverChrome.quit();
     }
 
     @Test
     public void test1() {
-//        driver = new ChromeDriver();
-        driver.get("http://192.168.111.16/litecart/admin/");
-//        driver.manage().window().setSize(new Dimension(1440, 860));
+//        driverChrome = new ChromedriverChrome();
+        driverChrome.get("http://192.168.111.16/litecart/admin/");
+//        driverChrome.manage().window().setSize(new Dimension(1440, 860));
+        loginPassChrome();
 
-        //maximize();
-        loginPass();
-
-//        driver.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
-        click_xpath("//li[@id=\'app-\']/a/span[2]");
-        driver.findElement(By.cssSelector("#doc-logotype .name")).click();
-        driver.findElement(By.linkText("Catalog")).click();
-        driver.findElement(By.cssSelector("#doc-product_groups .name")).click();
-        driver.findElement(By.cssSelector("#doc-option_groups .name")).click();
-        driver.findElement(By.cssSelector("#doc-manufacturers .name")).click();
-        driver.findElement(By.cssSelector("#doc-suppliers .name")).click();
-        driver.findElement(By.cssSelector("#doc-delivery_statuses .name")).click();
-        driver.findElement(By.cssSelector("#doc-sold_out_statuses .name")).click();
-        driver.findElement(By.cssSelector("#doc-quantity_units .name")).click();
-        driver.findElement(By.cssSelector("#doc-csv .name")).click();
-//        driver.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[3]")).click();
-        click_xpath("(//li[@id=\'app-\']/a/span[2])[3]");
-        driver.findElement(By.linkText("Currencies")).click();
-//        driver.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[5]")).click();
-        click_xpath("(//li[@id=\'app-\']/a/span[2])[5]");
-        driver.findElement(By.cssSelector("#doc-csv .name")).click();
-        driver.findElement(By.cssSelector("#doc-newsletter .name")).click();
-        driver.findElement(By.linkText("Geo Zones")).click();
-        driver.findElement(By.linkText("Languages")).click();
-        driver.findElement(By.cssSelector("#doc-storage_encoding .name")).click();
-        driver.findElement(By.linkText("Modules")).click();
-        driver.findElement(By.cssSelector("#doc-customer .name")).click();
-        driver.findElement(By.cssSelector("#doc-shipping .name")).click();
-        driver.findElement(By.cssSelector("#doc-payment .name")).click();
-        driver.findElement(By.cssSelector("#doc-order_total .name")).click();
-        driver.findElement(By.cssSelector("#doc-order_success .name")).click();
-        driver.findElement(By.cssSelector("#doc-order_action .name")).click();
-        driver.findElement(By.linkText("Orders")).click();
-        driver.findElement(By.cssSelector("#doc-order_statuses .name")).click();
-        driver.findElement(By.linkText("Pages")).click();
-        driver.findElement(By.linkText("Reports")).click();
-        driver.findElement(By.cssSelector("#doc-most_sold_products .name")).click();
-        driver.findElement(By.cssSelector("#doc-most_shopping_customers .name")).click();
-        driver.findElement(By.linkText("Settings")).click();
-        driver.findElement(By.linkText("Defaults")).click();
-        driver.findElement(By.linkText("General")).click();
-        driver.findElement(By.linkText("Listings")).click();
-        driver.findElement(By.linkText("Images")).click();
-        driver.findElement(By.linkText("Checkout")).click();
-        driver.findElement(By.linkText("Advanced")).click();
-        driver.findElement(By.linkText("Security")).click();
-        driver.findElement(By.linkText("Slides")).click();
-        driver.findElement(By.linkText("Tax")).click();
-        driver.findElement(By.linkText("Tax Rates")).click();
-//        driver.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[15]")).click();
-        click_xpath("(//li[@id=\'app-\']/a/span[2])[15]");
-        driver.findElement(By.cssSelector("#doc-scan .name")).click();
-        driver.findElement(By.cssSelector("#doc-csv .name")).click();
-        driver.findElement(By.linkText("Users")).click();
-        driver.findElement(By.linkText("vQmods")).click();
-//        driver.close();
-//        driver.quit();
+//        driverChrome.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
+        clickXpath("//li[@id=\'app-\']/a/span[2]");
+        driverChrome.findElement(By.cssSelector("#doc-logotype .name")).click();
+        driverChrome.findElement(By.linkText("Catalog")).click();
+        driverChrome.findElement(By.cssSelector("#doc-product_groups .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-option_groups .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-manufacturers .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-suppliers .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-delivery_statuses .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-sold_out_statuses .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-quantity_units .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-csv .name")).click();
+//        driverChrome.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[3]")).click();
+        clickXpath("(//li[@id=\'app-\']/a/span[2])[3]");
+        driverChrome.findElement(By.linkText("Currencies")).click();
+//        driverChrome.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[5]")).click();
+        clickXpath("(//li[@id=\'app-\']/a/span[2])[5]");
+        driverChrome.findElement(By.cssSelector("#doc-csv .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-newsletter .name")).click();
+        driverChrome.findElement(By.linkText("Geo Zones")).click();
+        driverChrome.findElement(By.linkText("Languages")).click();
+        driverChrome.findElement(By.cssSelector("#doc-storage_encoding .name")).click();
+        driverChrome.findElement(By.linkText("Modules")).click();
+        driverChrome.findElement(By.cssSelector("#doc-customer .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-shipping .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-payment .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-order_total .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-order_success .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-order_action .name")).click();
+        driverChrome.findElement(By.linkText("Orders")).click();
+        driverChrome.findElement(By.cssSelector("#doc-order_statuses .name")).click();
+        driverChrome.findElement(By.linkText("Pages")).click();
+        driverChrome.findElement(By.linkText("Reports")).click();
+        driverChrome.findElement(By.cssSelector("#doc-most_sold_products .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-most_shopping_customers .name")).click();
+        driverChrome.findElement(By.linkText("Settings")).click();
+        driverChrome.findElement(By.linkText("Defaults")).click();
+        driverChrome.findElement(By.linkText("General")).click();
+        driverChrome.findElement(By.linkText("Listings")).click();
+        driverChrome.findElement(By.linkText("Images")).click();
+        driverChrome.findElement(By.linkText("Checkout")).click();
+        driverChrome.findElement(By.linkText("Advanced")).click();
+        driverChrome.findElement(By.linkText("Security")).click();
+        driverChrome.findElement(By.linkText("Slides")).click();
+        driverChrome.findElement(By.linkText("Tax")).click();
+        driverChrome.findElement(By.linkText("Tax Rates")).click();
+//        driverChrome.findElement(By.xpath("(//li[@id=\'app-\']/a/span[2])[15]")).click();
+        clickXpath("(//li[@id=\'app-\']/a/span[2])[15]");
+        driverChrome.findElement(By.cssSelector("#doc-scan .name")).click();
+        driverChrome.findElement(By.cssSelector("#doc-csv .name")).click();
+        driverChrome.findElement(By.linkText("Users")).click();
+        driverChrome.findElement(By.linkText("vQmods")).click();
+//        driverChrome.close();
+//        driverChrome.quit();
 
     }
 
 
     @Test
     public void test2() {
-//        driver = new ChromeDriver();
-        driver.get("http://192.168.111.16/litecart/admin/login.php");
+//        driverChrome = new ChromedriverChrome();
+        driverChrome.get("http://192.168.111.16/litecart/admin/login.php");
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        driver.manage().window().setSize(new Dimension(1440, 860));
+        driverChrome.manage().window().setSize(new Dimension(1440, 860));
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        loginPass();
-//        driver.close();
-        driver.quit();
+        loginPassChrome();
+//        driverChrome.close();
+        driverChrome.quit();
 
 //        int seconds = 10;
 //        // Преобразование целочисленного значения в Duration
 //        Duration duration = Duration.ofSeconds(seconds);
 //
-//        driver.get("http://192.168.111.16/litecart/admin/login.php");
-//        driver.manage().window().setSize(new Dimension(1440, 860));
+//        driverChrome.get("http://192.168.111.16/litecart/admin/login.php");
+//        driverChrome.manage().window().setSize(new Dimension(1440, 860));
 //
-//        WebDriverWait wait = new WebDriverWait(driver, duration); // Инициализация explicit wait с таймаутом 10 секунд
+//        WebdriverChromeWait wait = new WebdriverChromeWait(driverChrome, duration); // Инициализация explicit wait с таймаутом 10 секунд
 //
 //        WebElement usernameInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
 //        usernameInput.click();

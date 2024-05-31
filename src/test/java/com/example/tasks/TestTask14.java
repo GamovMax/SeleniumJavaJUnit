@@ -18,26 +18,25 @@ public class TestTask14 extends BasePage.BasePage{
 //        !!!Сделать цикл с параметром (for)!!!
 
         get(URL_ADMIN);
-        //maximize();
-        loginPass();
-        click_linkText("Countries");
-        click_linkText("Add New Country");
+        loginPassChrome();
+        clickLinkText("Countries");
+        clickLinkText("Add New Country");
 
         // Найдем все элементы, соответствующие CSS селектору
-        List<WebElement> elements = driver.findElements(By.cssSelector("a[target='_blank']>i.fa-external-link"));
+        List<WebElement> elements = driverChrome.findElements(By.cssSelector("a[target='_blank']>i.fa-external-link"));
 
         elements.get(0).click();
 
         // Получаем список всех вкладок
-        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        ArrayList<String> tabs = new ArrayList<>(driverChrome.getWindowHandles());
 
         // Закрываем вторую вкладку
-        driver.switchTo().window(tabs.get(1));
-        driver.findElement(By.cssSelector("a.mw-logo"));
-        driver.close();
+        driverChrome.switchTo().window(tabs.get(1));
+        driverChrome.findElement(By.cssSelector("a.mw-logo"));
+        driverChrome.close();
 
         // Переключаемся на первую вкладку
-        driver.switchTo().window(tabs.get(0));
+        driverChrome.switchTo().window(tabs.get(0));
 
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
@@ -45,15 +44,15 @@ public class TestTask14 extends BasePage.BasePage{
         elements.get(1).click();
 
         // Получаем список всех вкладок
-        tabs = new ArrayList<>(driver.getWindowHandles());
+        tabs = new ArrayList<>(driverChrome.getWindowHandles());
 
         // Закрываем вторую вкладку
-        driver.switchTo().window(tabs.get(1));
-        driver.findElement(By.cssSelector("a.mw-logo"));
-        driver.close();
+        driverChrome.switchTo().window(tabs.get(1));
+        driverChrome.findElement(By.cssSelector("a.mw-logo"));
+        driverChrome.close();
 
         // Переключаемся на первую вкладку
-        driver.switchTo().window(tabs.get(0));
+        driverChrome.switchTo().window(tabs.get(0));
 
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
@@ -61,15 +60,15 @@ public class TestTask14 extends BasePage.BasePage{
         elements.get(2).click();
 
         // Получаем список всех вкладок
-        tabs = new ArrayList<>(driver.getWindowHandles());
+        tabs = new ArrayList<>(driverChrome.getWindowHandles());
 
         // Закрываем вторую вкладку
-        driver.switchTo().window(tabs.get(1));
-        driver.findElement(By.cssSelector("a.mw-logo"));
-        driver.close();
+        driverChrome.switchTo().window(tabs.get(1));
+        driverChrome.findElement(By.cssSelector("a.mw-logo"));
+        driverChrome.close();
 
         // Переключаемся на первую вкладку
-        driver.switchTo().window(tabs.get(0));
+        driverChrome.switchTo().window(tabs.get(0));
 
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
@@ -77,15 +76,15 @@ public class TestTask14 extends BasePage.BasePage{
         elements.get(3).click();
 
         // Получаем список всех вкладок
-        tabs = new ArrayList<>(driver.getWindowHandles());
+        tabs = new ArrayList<>(driverChrome.getWindowHandles());
 
         // Закрываем вторую вкладку
-        driver.switchTo().window(tabs.get(1));
-        driver.findElement(By.className("infa-h-logo"));
-        driver.close();
+        driverChrome.switchTo().window(tabs.get(1));
+        driverChrome.findElement(By.className("infa-h-logo"));
+        driverChrome.close();
 
         // Переключаемся на первую вкладку
-        driver.switchTo().window(tabs.get(0));
+        driverChrome.switchTo().window(tabs.get(0));
 
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
@@ -93,15 +92,15 @@ public class TestTask14 extends BasePage.BasePage{
         elements.get(4).click();
 
         // Получаем список всех вкладок
-        tabs = new ArrayList<>(driver.getWindowHandles());
+        tabs = new ArrayList<>(driverChrome.getWindowHandles());
 
         // Закрываем вторую вкладку
-        driver.switchTo().window(tabs.get(1));
-        driver.findElement(By.cssSelector("a.mw-logo"));
-        driver.close();
+        driverChrome.switchTo().window(tabs.get(1));
+        driverChrome.findElement(By.cssSelector("a.mw-logo"));
+        driverChrome.close();
 
         // Переключаемся на первую вкладку
-        driver.switchTo().window(tabs.get(0));
+        driverChrome.switchTo().window(tabs.get(0));
 
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
@@ -109,15 +108,15 @@ public class TestTask14 extends BasePage.BasePage{
         elements.get(5).click();
 
         // Получаем список всех вкладок
-        tabs = new ArrayList<>(driver.getWindowHandles());
+        tabs = new ArrayList<>(driverChrome.getWindowHandles());
 
         // Закрываем вторую вкладку
-        driver.switchTo().window(tabs.get(1));
-        driver.findElement(By.cssSelector("a.mw-logo"));
-        driver.close();
+        driverChrome.switchTo().window(tabs.get(1));
+        driverChrome.findElement(By.cssSelector("a.mw-logo"));
+        driverChrome.close();
 
         // Переключаемся на первую вкладку
-        driver.switchTo().window(tabs.get(0));
+        driverChrome.switchTo().window(tabs.get(0));
 
 //---------------------------------------------------------------------------
 //---------------------------------------------------------------------------
@@ -125,15 +124,15 @@ public class TestTask14 extends BasePage.BasePage{
         elements.get(6).click();
 
         // Получаем список всех вкладок
-        tabs = new ArrayList<>(driver.getWindowHandles());
+        tabs = new ArrayList<>(driverChrome.getWindowHandles());
 
         // Закрываем вторую вкладку
-        driver.switchTo().window(tabs.get(1));
-        driver.findElement(By.cssSelector("a.mw-logo"));
-        driver.close();
+        driverChrome.switchTo().window(tabs.get(1));
+        driverChrome.findElement(By.cssSelector("a.mw-logo"));
+        driverChrome.close();
 
         // Переключаемся на первую вкладку
-        driver.switchTo().window(tabs.get(0));
+        driverChrome.switchTo().window(tabs.get(0));
 
     }
 }

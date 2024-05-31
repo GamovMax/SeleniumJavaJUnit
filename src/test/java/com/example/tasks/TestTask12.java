@@ -11,33 +11,33 @@ public class TestTask12 extends BasePage.BasePage {
 
         get(URL_ADMIN);
 
-        loginPass();
+        loginPassChrome();
 
-        click_linkText("Catalog");
+        clickLinkText("Catalog");
 
-        click_partialLinkText("dd New Produc");
+        clickPartialLinkText("dd New Produc");
 
-        click_cssSelector("input[data-type=\"toggle\"][value=\"1\"]");
+        clickCssSelector("input[data-type=\"toggle\"][value=\"1\"]");
 
         Random random = new Random();
         int randomNumber = random.nextInt(1000000000);
 
         String name = "Name" + randomNumber;
 
-        click_cssSelector("input[name='name[en]']");
-        sendKeys_cssSelector("input[name='name[en]']", name);
+        clickCssSelector("input[name='name[en]']");
+        sendKeysCssSelector("input[name='name[en]']", name);
 
-        click_linkText("Information");
+        clickLinkText("Information");
 
-        click_name("keywords");
-        sendKeys_name("keywords", name);
+        clickName("keywords");
+        sendKeysName("keywords", name);
 
-        click_linkText("Prices");
+        clickLinkText("Prices");
 
-        click_name("gross_prices[USD]");
-        sendKeys_name("gross_prices[USD]", "1");
+        clickName("gross_prices[USD]");
+        sendKeysName("gross_prices[USD]", "1");
 
-        click_name("save");
+        clickName("save");
 
     }
 }
