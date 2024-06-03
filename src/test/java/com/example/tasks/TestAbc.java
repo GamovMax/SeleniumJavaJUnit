@@ -1,9 +1,8 @@
 package com.example.tasks;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -14,9 +13,8 @@ public class TestAbc extends BasePage.BasePage{
     @Test
     public void Country() {
 
-        driverChrome = new ChromeDriver();
         get(URL_ADMIN + "?app=countries&doc=countries");
-        loginPassChrome();
+        loginPass(driverChrome);
 
         List<String> countries = new ArrayList<>();
         List<String> countriesWithZones = new ArrayList<>();

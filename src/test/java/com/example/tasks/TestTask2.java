@@ -7,6 +7,6 @@ public class TestTask2 extends BasePage.BasePage {
     @Test
     public void task2() {
         get(URL_ADMIN + "login.php");
-        loginPassChrome();
+        loginPass(driverChrome);
     }
 }

@@ -15,7 +15,8 @@ public class MainTest {
         driverFirefox.get(URL_ADMIN);
 //        driverFirefox.manage().window().setSize(new Dimension(1440, 860));
         driverFirefox.manage().window().maximize();
-        loginPassFirefox();
+
+        loginPass(driverFirefox);
         driverFirefox.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
         driverFirefox.findElement(By.cssSelector("#doc-logotype .name")).click();
         driverFirefox.findElement(By.linkText("Catalog")).click();
@@ -72,9 +73,8 @@ public class MainTest {
         driverEdge = new EdgeDriver();
         driverEdge.get(URL_ADMIN);
 //        driverEdge.manage().window().setSize(new Dimension(1440, 860));
-
         driverEdge.manage().window().maximize();
-        loginPassEdge();
+        loginPass(driverEdge);
 
         driverEdge.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
         driverEdge.findElement(By.cssSelector("#doc-logotype .name")).click();

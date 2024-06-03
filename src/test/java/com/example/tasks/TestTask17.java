@@ -13,7 +13,7 @@ public class TestTask17 extends BasePage.BasePage {
     public void Task17()
     {
         get("http://192.168.111.16/litecart/admin/?app=catalog&doc=catalog&category_id=1");
-        loginPassChrome();
+        loginPass(driverChrome);
         clickLinkText("Blue Duck");
         back();
         clickLinkText("Green Duck");
@@ -50,9 +50,6 @@ public class TestTask17 extends BasePage.BasePage {
             }
             else if (entry.getLevel().toString().equals("ERROR")) {
                 System.out.println("В логе найдено сообщение об ошибке: " + entry.getMessage());
-            }
-            else if (entry.getLevel().toString().equals("CRITICAL")) {
-                System.out.println("В логе найдена критическая ошибка: " + entry.getMessage());
             }
             else if (entry.getLevel().toString().equals("CRITICAL")) {
                 System.out.println("В логе найдена критическая ошибка: " + entry.getMessage());

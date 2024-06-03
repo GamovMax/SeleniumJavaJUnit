@@ -26,7 +26,7 @@ public class TestMainChrome extends BasePage.BasePage{
     @Test
     public void test1() {
         get(URL_ADMIN);
-        loginPassChrome();
+        loginPass(driverChrome);
         clickXpath("//li[@id=\'app-\']/a/span[2]");
         clickCssSelector("#doc-logotype .name");
         clickLinkText("Catalog");        
@@ -81,10 +81,8 @@ public class TestMainChrome extends BasePage.BasePage{
     @Test
     public void test2() {
         get(URL_ADMIN + "login.php");
-        //maximize();
+
         wait(2000);
-        //maximize();
-        wait(2000);
-        loginPassChrome();
+        loginPass(driverChrome);
     }
 }

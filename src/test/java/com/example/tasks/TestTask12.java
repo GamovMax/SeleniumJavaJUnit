@@ -11,7 +11,7 @@ public class TestTask12 extends BasePage.BasePage {
 
         get(URL_ADMIN);
 
-        loginPassChrome();
+        loginPass(driverChrome);
 
         clickLinkText("Catalog");
 

@@ -100,27 +100,11 @@ public class BasePage {
         driverChrome.manage().window().maximize();
     }
 
-    public static void loginPassChrome() {
-        driverChrome.findElement(By.name("username")).click();
-        driverChrome.findElement(By.name("username")).sendKeys(LOGIN_PASS);
-        driverChrome.findElement(By.name("password")).click();
-        driverChrome.findElement(By.name("password")).sendKeys(LOGIN_PASS);
-        driverChrome.findElement(By.name("login")).click();
-    }
-
-    public static void loginPassFirefox() {
-        driverFirefox.findElement(By.name("username")).click();
-        driverFirefox.findElement(By.name("username")).sendKeys(LOGIN_PASS);
-        driverFirefox.findElement(By.name("password")).click();
-        driverFirefox.findElement(By.name("password")).sendKeys(LOGIN_PASS);
-        driverFirefox.findElement(By.name("login")).click();
-    }
-
-    public static void loginPassEdge() {
-        driverEdge.findElement(By.name("username")).click();
-        driverEdge.findElement(By.name("username")).sendKeys(LOGIN_PASS);
-        driverEdge.findElement(By.name("password")).click();
-        driverEdge.findElement(By.name("password")).sendKeys(LOGIN_PASS);
-        driverEdge.findElement(By.name("login")).click();
+    public static void loginPass(WebDriver driver) {
+        driver.findElement(By.name("username")).click();
+        driver.findElement(By.name("username")).sendKeys(LOGIN_PASS);
+        driver.findElement(By.name("password")).click();
+        driver.findElement(By.name("password")).sendKeys(LOGIN_PASS);
+        driver.findElement(By.name("login")).click();
     }
 }

@@ -18,7 +18,7 @@ public class TestTask14 extends BasePage.BasePage{
 //        !!!Сделать цикл с параметром (for)!!!
 
         get(URL_ADMIN);
-        loginPassChrome();
+        loginPass(driverChrome);
         clickLinkText("Countries");
         clickLinkText("Add New Country");
 

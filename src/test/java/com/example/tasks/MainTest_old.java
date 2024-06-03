@@ -88,7 +88,7 @@ public class MainTest_old extends BasePage.BasePage {
 //        driverChrome = new ChromedriverChrome();
         driverChrome.get("http://192.168.111.16/litecart/admin/");
 //        driverChrome.manage().window().setSize(new Dimension(1440, 860));
-        loginPassChrome();
+        loginPass(driverChrome);
 
 //        driverChrome.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
         clickXpath("//li[@id=\'app-\']/a/span[2]");
@@ -163,7 +163,7 @@ public class MainTest_old extends BasePage.BasePage {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        loginPassChrome();
+        loginPass(driverChrome);
 //        driverChrome.close();
         driverChrome.quit();
 
@@ -192,7 +192,7 @@ public class MainTest_old extends BasePage.BasePage {
         driverFirefox.get("http://192.168.111.16/litecart/admin/");
         driverFirefox.manage().window().setSize(new Dimension(1440, 860));
 
-        loginPassFirefox();
+        loginPass(driverFirefox);
 
         driverFirefox.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
         driverFirefox.findElement(By.cssSelector("#doc-logotype .name")).click();
@@ -252,7 +252,7 @@ public class MainTest_old extends BasePage.BasePage {
         driverEdge.get("http://192.168.111.16/litecart/admin/");
         driverEdge.manage().window().setSize(new Dimension(1440, 860));
 
-        loginPassEdge();
+        loginPass(driverEdge);
 
         driverEdge.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
         driverEdge.findElement(By.cssSelector("#doc-logotype .name")).click();

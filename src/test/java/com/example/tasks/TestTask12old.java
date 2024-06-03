@@ -20,7 +20,7 @@ public class TestTask12old extends BasePage.BasePage {
 //        driver.get("http://192.168.111.16/litecart/admin/login.php");
         get("http://192.168.111.16/litecart/admin/login.php");
 //        driver.manage().window().
-        loginPassChrome();
+        loginPass(driverChrome);
 
 //        driver.findElement(By.linkText("Catalog")).click();
         clickLinkText("Catalog");
