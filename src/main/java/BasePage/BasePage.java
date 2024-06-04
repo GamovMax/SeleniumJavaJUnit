@@ -5,9 +5,11 @@ import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import static constants.Constant.TimeoutVariable.IMPLICIT_WAIT;
 import static constants.Constant.loginpswd.LOGIN_PASS;
@@ -58,6 +60,14 @@ public class BasePage {
 
     public static void clickXpath(String locatorXpath) {
         driverChrome.findElement(By.xpath(locatorXpath)).click();
+    }
+
+    public static WebElement findXpath(String locatorXpath) {
+        return driverChrome.findElement(By.xpath(locatorXpath));
+    }
+
+    public static List<WebElement> findCssSelectorElements(String locatorCssSelector) {
+        return driverChrome.findElements(By.cssSelector(locatorCssSelector));
     }
 
     public static void clickCssSelector(String locatorCssSelector) {

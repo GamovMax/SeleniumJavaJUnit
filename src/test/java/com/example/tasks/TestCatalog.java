@@ -7,7 +7,7 @@ public class TestCatalog extends BasePage.BasePage {
     @Test
     public void Heading() {
         get(URL_CLIENT);
-        //maximize();
+
         findElementXpath("//div[@id=\"box-most-popular\"]/div/ul/li[1]/a[1]/div[1]/div");
         findElementXpath("//div[@id=\"box-most-popular\"]/div/ul/li[2]/a[1]/div[1]/div");
         findElementXpath("//div[@id=\"box-most-popular\"]/div/ul/li[3]/a[1]/div[1]/div");
