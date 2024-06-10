@@ -2,8 +2,13 @@ package com.example.tasks;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import static BasePage.BasePage.*;
 import static constants.Constant.Urls.*;
 
@@ -17,7 +22,51 @@ public class MainTest {
         driverFirefox.manage().window().maximize();
 
         loginPass(driverFirefox);
-        driverFirefox.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
+
+        List<String> links = new ArrayList<>();
+        List<WebElement> elements = driverFirefox.findElements(By.cssSelector("li#app-"));
+
+        // Записываем все ссылки в массив
+        for (WebElement element : elements)
+        {
+            links.add(element.findElement(By.tagName("a")).getAttribute("href"));
+        }
+
+        for (String link : links)
+        {
+            driverFirefox.get(link);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+            List<WebElement> subElements = driverFirefox.findElements(By.cssSelector("li#app->ul.docs>li>a"));
+            if (!subElements.isEmpty())
+            {
+                List<String> subLinks = new ArrayList<>(); // Очищаем массив подссылок
+                for (WebElement subElement : subElements)
+                {
+                    subLinks.add(subElement.getAttribute("href"));
+                }
+
+                if(subLinks.size()!=1)
+                {
+                    for (int i = 1; i < subLinks.size(); i++)
+                    {
+                        driverFirefox.get(subLinks.get(i));
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+                            throw new RuntimeException(e);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        /*driverFirefox.findElement(By.xpath("//li[@id=\'app-\']/a/span[2]")).click();
         driverFirefox.findElement(By.cssSelector("#doc-logotype .name")).click();
         driverFirefox.findElement(By.linkText("Catalog")).click();
         driverFirefox.findElement(By.cssSelector("#doc-product_groups .name")).click();
@@ -64,7 +113,7 @@ public class MainTest {
         driverFirefox.findElement(By.cssSelector("#doc-scan .name")).click();
         driverFirefox.findElement(By.cssSelector("#doc-csv .name")).click();
         driverFirefox.findElement(By.linkText("Users")).click();
-        driverFirefox.findElement(By.linkText("vQmods")).click();
+        driverFirefox.findElement(By.linkText("vQmods")).click();*/
         driverFirefox.quit();
     }
 
