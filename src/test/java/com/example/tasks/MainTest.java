@@ -35,11 +35,11 @@ public class MainTest {
         for (String link : links)
         {
             driverFirefox.get(link);
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
 
             List<WebElement> subElements = driverFirefox.findElements(By.cssSelector("li#app->ul.docs>li>a"));
             if (!subElements.isEmpty())
@@ -55,11 +55,11 @@ public class MainTest {
                     for (int i = 1; i < subLinks.size(); i++)
                     {
                         driverFirefox.get(subLinks.get(i));
-                        try {
-                            Thread.sleep(1000);
-                        } catch (InterruptedException e) {
-                            throw new RuntimeException(e);
-                        }
+//                        try {
+//                            Thread.sleep(1000);
+//                        } catch (InterruptedException e) {
+//                            throw new RuntimeException(e);
+//                        }
                     }
                 }
             }
