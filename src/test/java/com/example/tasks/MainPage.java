@@ -1,9 +1,9 @@
-package com.example.tasks;
+/*package com.example.tasks;
 import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
-// page_url = https://www.jetbrains.com/
+page_url = https://www.jetbrains.com/
 public class MainPage {
 
   public SelenideElement seeDeveloperToolsButton = $x("//*[@data-test-marker='Developer Tools']");
@@ -11,7 +11,7 @@ public class MainPage {
   public SelenideElement toolsMenu = $x("//div[@data-test='main-menu-item' and @data-test-marker = 'Developer Tools']");
   public SelenideElement searchButton = $("[data-test='site-header-search-action']");
 
-  /*public static WebDriver driver;
+  public static WebDriver driver;
   public static WebDriver driverFirefox;
   public static WebDriver driverEdge;
 
@@ -80,5 +80,6 @@ public class MainPage {
     driverEdge.findElement(By.name("password")).click();
     driverEdge.findElement(By.name("password")).sendKeys(LOGIN_PASS);
     driverEdge.findElement(By.name("login")).click();
-  }*/
+  }
 }
+*/
