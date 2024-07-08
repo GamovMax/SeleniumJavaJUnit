@@ -53,7 +53,7 @@ public class TestAPI {
         // Отправка DELETE запроса
         given()
                 .when()
-                .delete("/posts/1}")
+                .delete("/posts/1")
                 .then()
                 .statusCode(200); // Проверка статуса ответа (200 - OK)
     }

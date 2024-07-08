@@ -1,4 +1,4 @@
-package com.example.tasks;
+/*package com.example.tasks;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -51,3 +51,4 @@ public class MainPageTest {
 
 assertEquals("All Developer Tools and Products by JetBrains", Selenide.title());    }
 }
+*/

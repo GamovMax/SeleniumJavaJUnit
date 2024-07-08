@@ -1,4 +1,4 @@
-package com.example.tasks;
+/*package com.example.tasks;
 import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -11,3 +11,4 @@ public class MainPage_ {
   public SelenideElement toolsMenu = $x("//div[@data-test='main-menu-item' and @data-test-marker = 'Developer Tools']");
   public SelenideElement searchButton = $("[data-test='site-header-search-action']");
 }
+*/

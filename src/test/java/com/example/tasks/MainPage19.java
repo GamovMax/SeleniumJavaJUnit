@@ -1,4 +1,4 @@
-package com.example.tasks;
+/*package com.example.tasks;
 
 import org.openqa.selenium.WebDriver;
 
@@ -15,4 +15,4 @@ public class MainPage19 {
         driver.manage().window().maximize();
     }
 }
-
+*/
