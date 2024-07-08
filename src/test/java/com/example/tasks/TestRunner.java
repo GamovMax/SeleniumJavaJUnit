@@ -18,7 +18,7 @@ import org.junit.runners.Suite.SuiteClasses;
         TestTask16.class,
         TestTask17.class,
         TestTask18.class,
-        TestTask19.class
+        TestTask19.class,
 })
 public class TestRunner {
 

@@ -15,4 +15,3 @@ public class MainPage19 {
         driver.manage().window().maximize();
     }
 }
-
