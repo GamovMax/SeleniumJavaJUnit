@@ -24,7 +24,7 @@ public class TestAPI {
 
         // Проверка статус-кода ответа
         int statusCode = response.getStatusCode();
-        System.out.println("Status code: " + statusCode + "\n");
+        System.out.println("\ntestGetFirst\nStatus code: " + statusCode + "\n");
     }
 
     @Test
@@ -84,7 +84,7 @@ public class TestAPI {
                 .get("/posts/1"); // Пример запроса к API, где /posts/1 - это часть URL, необходимая для получения конкретной информации
 
         String jsonResponse = response.getBody().asString();
-        System.out.println(jsonResponse + "\n");
+        System.out.println("\nGetJSON\n" + jsonResponse + "\n");
 
     }
 
@@ -94,7 +94,7 @@ public class TestAPI {
             .when()
             .options("/posts");
 
-        System.out.println("Response code: " + response.getStatusCode());
+        System.out.println("\nOption\nResponse code: " + response.getStatusCode());
         System.out.println("Allowed methods: " + response.getHeader("Allow") + "\n");
     }
 
@@ -102,7 +102,7 @@ public class TestAPI {
     public void Head(){
     Response response = RestAssured.head("/posts");
 
-        System.out.println("Response code: " + response.getStatusCode());
+        System.out.println("\nHead\nResponse code: " + response.getStatusCode());
         System.out.println("Content-Type: " + response.getHeader("Content-Type"));
         System.out.println("Response time: " + response.getTime() + " ms" + "\n");
     }
@@ -117,7 +117,7 @@ public class TestAPI {
                 .when()
                 .patch("/posts/1");
 
-        System.out.println("Response code: " + response.getStatusCode());
+        System.out.println("\nPatch\nResponse code: " + response.getStatusCode());
         System.out.println("Response body: " + response.getBody().asString() + "\n");
     }
 }
